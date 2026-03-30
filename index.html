@@ -1,584 +1,1972 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Med Spa Geo-Intelligence | PE Acquisition & De Novo Opportunities</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #1f2933;
-      background: #f5f7fa;
-    }
-    .page {
-      width: 8.5in;
-      min-height: 11in;
-      margin: 0.4in auto;
-      padding: 0.6in 0.7in;
-      background: #ffffff;
-      box-shadow: 0 0 4px rgba(0,0,0,0.15);
-      page-break-after: always;
-    }
-    h1, h2, h3, h4 {
-      margin: 0 0 0.3rem 0;
-      font-weight: 600;
-      color: #102a43;
-    }
-    h1 { font-size: 1.35rem; }
-    h2 { font-size: 1.05rem; margin-top: 0.7rem; }
-    h3 { font-size: 0.95rem; margin-top: 0.5rem; }
-    p { margin: 0.2rem 0 0.4rem 0; font-size: 0.8rem; line-height: 1.25; }
-    .small { font-size: 0.7rem; color: #7b8794; }
-    .tagline { font-size: 0.8rem; color: #52606d; }
-    .flex-row { display: flex; gap: 0.5rem; }
-    .flex-col { display: flex; flex-direction: column; }
-    .flex-1 { flex: 1; }
-    .flex-2 { flex: 2; }
-    .pill {
-      display: inline-block;
-      padding: 0.12rem 0.45rem;
-      border-radius: 999px;
-      font-size: 0.65rem;
-      font-weight: 500;
-    }
-    .pill-gold { background: #fff3c4; color: #8d5c00; }
-    .pill-blue { background: #e3f8ff; color: #035388; }
-    .pill-green { background: #e3f9e5; color: #0b6e4f; }
-    .pill-gray { background: #e4e7eb; color: #52606d; }
-    .section {
-      margin-top: 0.6rem;
-      padding-top: 0.4rem;
-      border-top: 1px solid #d8e2ec;
-    }
-    .stat-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.4rem;
-      margin-top: 0.3rem;
-    }
-    .stat {
-      flex: 1;
-      min-width: 1.4in;
-      background: #f5f7fa;
-      border-radius: 4px;
-      padding: 0.25rem 0.35rem;
-    }
-    .stat-label {
-      font-size: 0.65rem;
-      color: #7b8794;
-    }
-    .stat-value {
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: #102a43;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 0.3rem;
-    }
-    th, td {
-      border: 1px solid #d8e2ec;
-      padding: 0.2rem 0.25rem;
-      font-size: 0.72rem;
-      text-align: left;
-    }
-    th {
-      background: #f0f4f8;
-      font-weight: 600;
-    }
-    .note {
-      font-size: 0.7rem;
-      color: #7b8794;
-      margin-top: 0.2rem;
-    }
-    .callout {
-      border-left: 3px solid #f6c453;
-      background: #fff8e1;
-      padding: 0.3rem 0.4rem;
-      margin-top: 0.35rem;
-      font-size: 0.75rem;
-    }
-    .matrix {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.3rem;
-      margin-top: 0.3rem;
-      font-size: 0.73rem;
-    }
-    .matrix-cell {
-      border: 1px dashed #d8e2ec;
-      border-radius: 4px;
-      padding: 0.25rem 0.3rem;
-      background: #f9fbff;
-    }
-    .footer {
-      margin-top: 0.6rem;
-      border-top: 1px solid #d8e2ec;
-      padding-top: 0.3rem;
-      font-size: 0.7rem;
-      color: #7b8794;
-      display: flex;
-      justify-content: space-between;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>STOC Advisory — Med Spa PE Intelligence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+
+/* ===========================================================
+   TOKENS
+=========================================================== */
+:root {
+  --ink:        #111827;
+  --ink-2:      #374151;
+  --ink-3:      #6B7280;
+  --ink-4:      #9CA3AF;
+  --rule:       #D1D5DB;
+  --rule-lt:    #E5E7EB;
+  --bg:         #F9F8F6;
+  --bg-2:       #F3F2EF;
+  --white:      #FFFFFF;
+  --navy:       #0F2340;
+  --accent:     #2060D8;      /* one blue — used sparingly */
+  --accent-lt:  #EEF3FC;
+
+  /* data palette — 4 distinct, print-safe */
+  --d1: #1A56DB;   /* blue */
+  --d2: #057A55;   /* green */
+  --d3: #C27803;   /* amber */
+  --d4: #C81E1E;   /* red */
+
+  /* zones */
+  --z1: #1A56DB;
+  --z2: #057A55;
+  --z3: #C27803;
+  --z4: #C81E1E;
+
+  /* regions */
+  --rS: #1A56DB;
+  --rNE:#057A55;
+  --rMW:#C27803;
+  --rW: #C81E1E;
+
+  /* type */
+  --f-serif: 'Libre Baskerville', Georgia, serif;
+  --f-sans:  'Barlow', system-ui, sans-serif;
+  --f-cond:  'Barlow Condensed', system-ui, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--f-sans);
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--ink);
+  background: #C8C7C3;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ===========================================================
+   PAGE
+=========================================================== */
+.page {
+  width: 1100px;
+  margin: 0 auto 36px;
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* ===========================================================
+   MASTHEAD
+=========================================================== */
+.mast {
+  height: 44px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 2px solid var(--accent);
+  flex-shrink: 0;
+}
+.mast-brand {
+  font-family: var(--f-cond);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: white;
+}
+.mast-brand span { color: var(--accent); color: #60A5FA; }
+.mast-title {
+  font-family: var(--f-sans);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+}
+.mast-right { display: flex; align-items: center; gap: 16px; }
+.conf-badge {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: #60A5FA;
+  padding: 2px 8px;
+}
+.pg-num {
+  font-family: var(--f-cond);
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.25);
+}
+
+/* ===========================================================
+   FOOTER
+=========================================================== */
+.foot {
+  height: 24px;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  flex-shrink: 0;
+  margin-top: auto;
+}
+.foot span {
+  font-family: var(--f-sans);
+  font-size: 7.5px;
+  color: rgba(255,255,255,0.22);
+  letter-spacing: 0.5px;
+}
+
+/* ===========================================================
+   BODY / LAYOUT
+=========================================================== */
+.body { padding: 28px 40px 24px; flex: 1; }
+
+.g2  { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.g3  { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.g4  { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+.g60 { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+.g40 { display: grid; grid-template-columns: 1fr 1.4fr; gap: 24px; }
+
+.rule     { height: 1px; background: var(--rule); margin: 20px 0; }
+.rule-nav { height: 1px; background: var(--rule); margin: 16px 0; }
+
+/* ===========================================================
+   SECTION HEADING
+=========================================================== */
+.sec {
+  margin-bottom: 4px;
+}
+.sec-fig {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1px;
+}
+.sec-title {
+  font-family: var(--f-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.25;
+  letter-spacing: -0.2px;
+}
+.sec-sub {
+  font-size: 9px;
+  font-weight: 400;
+  color: var(--ink-3);
+  line-height: 1.5;
+  margin-top: 3px;
+}
+.src {
+  font-size: 7.5px;
+  color: var(--ink-4);
+  font-style: italic;
+  margin-top: 5px;
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   HERO (page 1)
+=========================================================== */
+.hero {
+  background: var(--navy);
+  padding: 40px 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  right: 0; top: 0;
+  width: 340px; height: 100%;
+  background: linear-gradient(135deg, rgba(32,96,216,0.12) 0%, transparent 60%);
+}
+.hero-label {
+  font-family: var(--f-cond);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 14px;
+}
+.hero-hed {
+  font-family: var(--f-serif);
+  font-size: 44px;
+  font-weight: 700;
+  line-height: 1.05;
+  color: white;
+  letter-spacing: -0.5px;
+  margin-bottom: 12px;
+  position: relative;
+}
+.hero-hed em { color: #60A5FA; font-style: italic; }
+.hero-rule { width: 32px; height: 2px; background: #60A5FA; margin-bottom: 20px; }
+.hero-sub {
+  font-size: 11px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.5);
+  line-height: 1.7;
+  max-width: 500px;
+  margin-bottom: 28px;
+}
+
+/* KPI strip */
+.kpi-strip {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.kpi {
+  padding: 16px 18px;
+  border-right: 1px solid rgba(255,255,255,0.07);
+}
+.kpi:last-child { border-right: none; }
+.kpi-n {
+  font-family: var(--f-serif);
+  font-size: 26px;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+.kpi-n sup { font-size: 11px; color: #60A5FA; font-family: var(--f-sans); }
+.kpi-l {
+  font-family: var(--f-cond);
+  font-size: 7.5px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-top: 4px;
+}
+.kpi-a {
+  font-size: 8px;
+  color: #60A5FA;
+  margin-top: 3px;
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* ===========================================================
+   CAPABILITY CARDS (page 1 bottom)
+=========================================================== */
+.cap-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--rule);
+}
+.cap {
+  padding: 20px 24px 20px;
+  border-right: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+}
+.cap:last-child { border-right: none; }
+.cap-num {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 7px;
+}
+.cap-title {
+  font-family: var(--f-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 7px;
+  line-height: 1.3;
+}
+.cap-body {
+  font-size: 9px;
+  color: var(--ink-2);
+  line-height: 1.65;
+  flex: 1;
+}
+.cap-divider { height: 1px; background: var(--rule-lt); margin: 12px 0; }
+.cap-stat {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--rule-lt);
+  font-size: 9px;
+}
+.cap-stat:last-child { border-bottom: none; }
+.cap-stat-k { color: var(--ink-3); }
+.cap-stat-v { font-weight: 700; color: var(--navy); }
+
+/* ===========================================================
+   THESIS STRIP
+=========================================================== */
+.thesis {
+  background: var(--navy);
+  padding: 16px 40px;
+}
+.thesis-label {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 8px;
+}
+.thesis-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+}
+.thesis-text {
+  font-size: 9px;
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+}
+.thesis-text strong { color: #60A5FA; font-weight: 600; }
+
+/* ===========================================================
+   MARKET BANNER
+=========================================================== */
+.mkt-banner {
+  background: var(--bg-2);
+  border-bottom: 1px solid var(--rule);
+  padding: 11px 40px;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-shrink: 0;
+}
+.mkt-hed {
+  font-family: var(--f-serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+  white-space: nowrap;
+}
+.mkt-sub {
+  font-size: 9px;
+  color: var(--ink-3);
+}
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 8.5px;
+  font-weight: 500;
+  color: var(--ink-2);
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 3px 9px;
+  white-space: nowrap;
+}
+.tag-dot { width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0; }
+
+/* ===========================================================
+   DATA ROWS
+=========================================================== */
+.dr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--rule-lt);
+  font-size: 9px;
+}
+.dr:last-child { border-bottom: none; }
+.dr-k { color: var(--ink-3); }
+.dr-v { font-weight: 600; color: var(--navy); }
+
+/* ===========================================================
+   TABLES
+=========================================================== */
+.tbl {
+  width: 100%;
+  border-collapse: collapse;
+}
+.tbl thead tr {
+  background: var(--navy);
+}
+.tbl thead th {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  padding: 7px 10px;
+  text-align: left;
+  white-space: nowrap;
+}
+.tbl thead th.r { text-align: right; }
+.tbl thead th.c { text-align: center; }
+.tbl tbody tr { border-bottom: 1px solid var(--rule-lt); }
+.tbl tbody tr:last-child { border-bottom: none; }
+.tbl tbody tr:nth-child(even) { background: #FAFAF8; }
+.tbl tbody td {
+  padding: 7px 10px;
+  font-size: 9px;
+  color: var(--ink-2);
+  vertical-align: middle;
+}
+.tbl tbody td.r { text-align: right; font-variant-numeric: tabular-nums; }
+.tbl tbody td.c { text-align: center; }
+.tbl tbody td.bold { font-weight: 700; color: var(--navy); }
+.tbl tbody td.dim  { color: var(--ink-4); font-size: 8.5px; }
+
+/* ===========================================================
+   PILLS
+=========================================================== */
+.pill {
+  display: inline-block;
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 2px 6px;
+}
+.pill-z1 { background: rgba(26,86,219,0.1); color: var(--z1); border: 1px solid rgba(26,86,219,0.2); }
+.pill-z2 { background: rgba(5,122,85,0.1); color: var(--z2); border: 1px solid rgba(5,122,85,0.2); }
+.pill-z3 { background: rgba(194,120,3,0.1); color: var(--z3); border: 1px solid rgba(194,120,3,0.2); }
+.pill-z4 { background: rgba(200,30,30,0.08); color: var(--z4); border: 1px solid rgba(200,30,30,0.18); }
+
+.score {
+  display: inline-block;
+  font-family: var(--f-serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  background: var(--navy);
+  padding: 1px 8px;
+  min-width: 34px;
+  text-align: center;
+}
+.score.hi { background: var(--accent); }
+
+.reg {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--navy);
+}
+.reg-dot { width: 6px; height: 6px; flex-shrink: 0; }
+
+/* ===========================================================
+   CHART FRAME
+=========================================================== */
+.chart-frame {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 14px;
+}
+.chart-fig {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.chart-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.3;
+  margin-bottom: 2px;
+  font-style: italic;
+}
+.chart-sub {
+  font-size: 8.5px;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+/* ===========================================================
+   BAR CHART
+=========================================================== */
+.bars { display: flex; flex-direction: column; gap: 8px; }
+.bar-row { display: flex; align-items: center; gap: 8px; }
+.bar-lbl {
+  font-family: var(--f-cond);
+  font-size: 9px;
+  font-weight: 600;
+  width: 68px;
+  text-align: right;
+  flex-shrink: 0;
+}
+.bar-track {
+  flex: 1;
+  height: 20px;
+  background: var(--bg-2);
+  position: relative;
+  border: 1px solid var(--rule-lt);
+}
+.bar-fill { position: absolute; left: 0; top: 0; height: 100%; }
+.bar-val {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--f-cond);
+  font-size: 9.5px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.3px;
+}
+.bar-ann {
+  font-size: 8px;
+  color: var(--ink-4);
+  width: 60px;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+.thr-line {
+  position: absolute;
+  top: -4px;
+  bottom: -4px;
+  width: 1px;
+  background: var(--d4);
+  z-index: 2;
+}
+.thr-lbl {
+  position: absolute;
+  top: -15px;
+  transform: translateX(-50%);
+  font-size: 7px;
+  color: var(--d4);
+  font-weight: 700;
+  font-family: var(--f-cond);
+  white-space: nowrap;
+  letter-spacing: 0.3px;
+}
+
+/* ===========================================================
+   INSIGHT BOX
+=========================================================== */
+.insight {
+  background: var(--navy);
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+}
+.insight-lbl {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #60A5FA;
+  margin-bottom: 5px;
+}
+.insight-body {
+  font-size: 9.5px;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.65;
+}
+.insight-body strong { color: #60A5FA; font-weight: 600; }
+
+/* ===========================================================
+   ZONE CARDS
+=========================================================== */
+.zone-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule);
+}
+.zone-card {
+  padding: 14px;
+  border-right: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+}
+.zone-card:last-child { border-right: none; }
+.zone-code {
+  font-family: var(--f-serif);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 3px;
+}
+.zone-name {
+  font-family: var(--f-cond);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 6px;
+}
+.zone-desc { font-size: 8.5px; color: var(--ink-3); line-height: 1.5; }
+.zone-n {
+  position: absolute;
+  top: 10px; right: 10px;
+  font-family: var(--f-serif);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy);
+  opacity: 0.05;
+  line-height: 1;
+}
+
+/* ===========================================================
+   HEATGRID
+=========================================================== */
+.hg { width: 100%; border-collapse: collapse; }
+.hg thead tr { background: var(--navy); }
+.hg thead th {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+  padding: 6px 9px;
+  text-align: center;
+  white-space: nowrap;
+}
+.hg thead th:first-child { text-align: left; }
+.hg tbody td {
+  padding: 6px 9px;
+  font-size: 8.5px;
+  border-bottom: 1px solid var(--rule-lt);
+  text-align: center;
+}
+.hg tbody td:first-child { text-align: left; color: var(--ink-2); font-weight: 500; }
+.hg tbody tr:last-child td { border-bottom: none; }
+.h1 { background: rgba(26,86,219,0.1); color: var(--z1); font-weight: 700; }
+.h2 { background: rgba(5,122,85,0.09); color: var(--z2); font-weight: 600; }
+.h3 { background: rgba(194,120,3,0.08); color: var(--z3); font-weight: 500; }
+.h4 { background: rgba(200,30,30,0.06); color: var(--ink-3); }
+
+/* ===========================================================
+   ROLLOUT
+=========================================================== */
+.rollout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--rule);
+  background: var(--white);
+}
+.rs {
+  padding: 14px;
+  border-right: 1px solid var(--rule);
+}
+.rs:last-child { border-right: none; }
+.rs-ph {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+.rs-title {
+  font-family: var(--f-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+.rs-why {
+  font-size: 8.5px;
+  color: var(--accent);
+  font-style: italic;
+  margin-bottom: 7px;
+  line-height: 1.45;
+}
+.rs-body { font-size: 8.5px; color: var(--ink-3); line-height: 1.5; }
+.rs-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--rule-lt);
+}
+.rs-val {
+  font-family: var(--f-serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.rs-lbl { font-size: 7.5px; color: var(--ink-4); margin-top: 1px; text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* ===========================================================
+   TARGET CARD
+=========================================================== */
+.tcard {
+  background: var(--white);
+  border: 1px solid var(--rule);
+  padding: 14px;
+}
+.tc-lbl {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.tc-mkt {
+  font-family: var(--f-serif);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 3px 0 5px;
+  line-height: 1.2;
+}
+.tc-score {
+  font-family: var(--f-serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+.tc-score-lbl {
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 600;
+  color: var(--ink-4);
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  text-align: right;
+  padding-bottom: 3px;
+}
+.tc-bar { height: 2px; background: var(--rule-lt); margin-bottom: 10px; }
+.tc-fill { height: 100%; }
+.tc-sec {
+  font-family: var(--f-cond);
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin: 8px 0 3px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--rule-lt);
+}
+.tc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 0;
+  font-size: 8.5px;
+  border-bottom: 1px solid var(--rule-lt);
+}
+.tc-row:last-child { border-bottom: none; }
+.tc-row .k { color: var(--ink-3); }
+.tc-row .v { font-weight: 600; color: var(--navy); }
+.sig-prime   { background: rgba(26,86,219,0.08); color: var(--z1); border: 1px solid rgba(26,86,219,0.2); }
+.sig-attract { background: rgba(5,122,85,0.08); color: var(--z2); border: 1px solid rgba(5,122,85,0.18); }
+.sig-review  { background: rgba(194,120,3,0.08); color: var(--z3); border: 1px solid rgba(194,120,3,0.18); }
+.sig {
+  display: inline-block;
+  font-family: var(--f-cond);
+  font-size: 7.5px;
+  font-weight: 700;
+  padding: 2px 6px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+}
+.rationale {
+  padding: 7px 9px;
+  margin-top: 8px;
+  font-size: 8.5px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+/* ===========================================================
+   METHODOLOGY TABLE
+=========================================================== */
+.wt {
+  display: inline-block;
+  font-family: var(--f-cond);
+  font-size: 8px;
+  font-weight: 700;
+  background: var(--accent);
+  color: white;
+  padding: 1px 5px;
+  min-width: 26px;
+  text-align: center;
+}
+
+/* ===========================================================
+   LEGEND
+=========================================================== */
+.legend { display: flex; flex-wrap: wrap; gap: 10px; }
+.legend-item { display: flex; align-items: center; gap: 5px; font-size: 8px; color: var(--ink-3); }
+.legend-dot { width: 8px; height: 8px; flex-shrink: 0; }
+
+/* ===========================================================
+   FOOTNOTES
+=========================================================== */
+.fn-bar {
+  padding: 8px 40px 0;
+  border-top: 1px solid var(--rule-lt);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px 28px;
+  flex-shrink: 0;
+}
+.fn {
+  font-size: 7.5px;
+  color: var(--ink-4);
+  line-height: 1.4;
+  display: flex;
+  gap: 4px;
+  padding: 1px 0;
+}
+.fn-n {
+  font-weight: 700;
+  color: var(--accent);
+  flex-shrink: 0;
+  font-family: var(--f-cond);
+}
+sup.ref {
+  font-size: 6.5px;
+  color: var(--accent);
+  font-weight: 700;
+  font-family: var(--f-cond);
+  vertical-align: super;
+}
+
+</style>
 </head>
 <body>
 
-<!-- PAGE 1 -->
-<div class="page">
-  <!-- Header -->
-  <div class="flex-row" style="align-items:flex-start; justify-content:space-between;">
-    <div class="flex-col flex-2">
-      <h1>Med Spa Geo‑Intelligence</h1>
-      <p class="tagline">
-        Data‑driven acquisition & de novo opportunity map for private equity across US med spa markets.
-      </p>
-      <span class="pill pill-gold">Confidential – PE Investment Overview</span>
-    </div>
-    <div class="flex-col" style="align-items:flex-end;">
-      <p class="small">Prepared for: Private Equity Sponsors</p>
-      <p class="small">Focus: US Med Spa Platforms, Tuck‑ins & De Novo</p>
+<!-- ═══════════════════════════════════
+     PAGE 1 — COVER
+═══════════════════════════════════ -->
+<div class="page" id="p1">
+  <div class="mast">
+    <div class="mast-brand">STOC <span>Advisory</span></div>
+    <div class="mast-title">Med Spa Acquisition Intelligence — PE Teaser</div>
+    <div class="mast-right">
+      <span class="conf-badge">Confidential</span>
+      <span class="pg-num">01 / 05</span>
     </div>
   </div>
 
-  <!-- Executive Summary -->
-  <div class="section">
-    <h2>Executive Thesis</h2>
-    <p>
-      The US medical spa market is a fast‑growing, cash‑pay healthcare vertical with high margins, fragmented supply, and low current PE penetration, creating a compelling roll‑up and de novo platform opportunity.[web:21][file:31]
-    </p>
-    <p>
-      This 2‑pager uses proprietary geo‑analytics (CBSA‑level STOCC Opportunity Score, Supply Gap, Target Zones, and Digital Maturity) to pinpoint where to build, buy, and cluster med spa assets across the four US regions.[file:31]
-    </p>
-
-    <div class="stat-row">
-      <div class="stat">
-        <div class="stat-label">Total Locations Analyzed</div>
-        <div class="stat-value">95</div>
+  <!-- Hero -->
+  <div class="hero">
+    <div class="hero-label">STOC Advisory — Proprietary Operator Intelligence Database</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-bottom:26px;">
+      <div>
+        <div class="hero-hed">23,860 Clinics.<br>686 Markets.<br><em>One Intelligence Layer.</em></div>
+        <div class="hero-rule"></div>
+        <div class="hero-sub">STOC Advisory's proprietary database covers the full U.S. medical spa operator landscape — structured from operator websites, review platforms, and social accounts. Every CBSA scored. Every acquisition target ranked.</div>
       </div>
-      <div class="stat">
-        <div class="stat-label">CBSAs Covered</div>
-        <div class="stat-value">43</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">% Sites Labeled “Prime Opportunity”</div>
-        <div class="stat-value">53.7%</div>
-      </div>
-      <div class="stat">
-        <div class="stat-label">Z2 & Z4 (Tuck‑in + De Novo)</div>
-        <div class="stat-value">55 Locations</div>
-      </div>
-    </div>
-    <p class="note">
-      STOCC Opportunity Score uses the “Normalized Final Opportunity” index (1–100) from the dataset; higher values indicate stronger opportunity.[file:31]
-    </p>
-  </div>
-
-  <!-- Regional View -->
-  <div class="section">
-    <h2>Regional Opportunity View (4 US Regions)</h2>
-    <p>
-      Opportunity is distributed across all regions, with the South showing the highest concentration of Prime Opportunity sites and the strongest average STOCC Opportunity Score.[file:31]
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th>Region</th>
-          <th>Locations</th>
-          <th>Avg STOCC Score</th>
-          <th>Avg Supply Gap</th>
-          <th>Avg Digital Maturity</th>
-          <th>% Prime Opportunity</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Midwest</td>
-          <td>15</td>
-          <td>68.1</td>
-          <td>-43.4</td>
-          <td>46.6</td>
-          <td>47%</td>
-        </tr>
-        <tr>
-          <td>Northeast</td>
-          <td>41</td>
-          <td>64.7</td>
-          <td>-193.7</td>
-          <td>60.8</td>
-          <td>41%</td>
-        </tr>
-        <tr>
-          <td>South</td>
-          <td>28</td>
-          <td>82.0</td>
-          <td>-31.8</td>
-          <td>60.8</td>
-          <td>71%</td>
-        </tr>
-        <tr>
-          <td>West</td>
-          <td>5</td>
-          <td>43.6</td>
-          <td>-56.8</td>
-          <td>55.2</td>
-          <td>20%</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="note">
-      Supply Gap reflects demand minus existing supply at market level; negative averages in Z1/Z2 regions are consistent with saturation and clustering dynamics.[file:31]
-    </p>
-  </div>
-
-  <!-- Target Zone Framework -->
-  <div class="section">
-    <h2>Target Zone Framework (Z1 – Z4)</h2>
-    <p>
-      Each location is classified into a Target Zone based on proximity to existing supply, adjusted for local market density, to inform whether it is best suited for bolt‑on, tuck‑in, or de novo deployment.[file:31]
-    </p>
-
-    <div class="matrix">
-      <div class="matrix-cell">
-        <strong>Z1 – Highly Saturated / Immediate Competition</strong><br/>
-        Very close to existing supply in dense markets; highest overlap and cannibalization risk.<br/>
-        Ideal for competitive takeouts and selective bolt‑ons where brand and Digital Maturity are strong.[file:31]
-      </div>
-      <div class="matrix-cell">
-        <strong>Z2 – Tuck‑in / Cluster Opportunity</strong><br/>
-        Close to existing supply but still viable for add‑ons, balancing demand and competition.[file:31]<br/>
-        Supports regional clustering strategies and operational leverage.
-      </div>
-      <div class="matrix-cell">
-        <strong>Z3 – Transitional / Emerging</strong><br/>
-        Emerging markets with moderate supply and growing demand (not prominent in this sample but supported by the logic framework).  
-      </div>
-      <div class="matrix-cell">
-        <strong>Z4 – De Novo / White Space</strong><br/>
-        High Supply Gap and limited nearby providers; ideal for greenfield sites and anchor platforms in mid‑density or suburban CBSAs.[file:31]
+      <div style="border-left:1px solid rgba(255,255,255,0.1);padding-left:36px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#60A5FA;margin-bottom:7px;">U.S. Med Spa TAM — 2032 Projection</div>
+        <div style="font-family:var(--f-serif);font-size:54px;font-weight:700;color:white;line-height:1;letter-spacing:-1.5px;margin-bottom:6px;">$44.83<span style="font-size:24px;color:#60A5FA;">B</span></div>
+        <div style="font-size:10px;color:rgba(255,255,255,0.35);font-weight:300;margin-bottom:18px;">18.6% CAGR&nbsp;&nbsp;|&nbsp;&nbsp;40–60% EBITDA margins at maturity</div>
+        <div style="display:flex;flex-direction:column;gap:7px;">
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:9px;color:rgba(255,255,255,0.6);">
+            <div style="width:4px;height:4px;background:#60A5FA;flex-shrink:0;margin-top:4px;"></div>
+            No national operator holds more than 3% market share<sup class="ref">1</sup>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:9px;color:rgba(255,255,255,0.6);">
+            <div style="width:4px;height:4px;background:#60A5FA;flex-shrink:0;margin-top:4px;"></div>
+            97% of operators remain independent; PE penetration below 5%
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:9px;color:rgba(255,255,255,0.6);">
+            <div style="width:4px;height:4px;background:#60A5FA;flex-shrink:0;margin-top:4px;"></div>
+            46% of U.S. consumers increased cosmetic spend in 2024 vs. 2023; Gen Z at 53%<sup class="ref">2</sup>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:9px;color:rgba(255,255,255,0.6);">
+            <div style="width:4px;height:4px;background:#60A5FA;flex-shrink:0;margin-top:4px;"></div>
+            ~80M addressable U.S. consumers; only 15M have had a procedure<sup class="ref">1</sup>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:8px;font-size:9px;color:rgba(255,255,255,0.6);">
+            <div style="width:4px;height:4px;background:#60A5FA;flex-shrink:0;margin-top:4px;"></div>
+            Cash-pay model eliminates reimbursement risk; recurring membership revenue
+          </div>
+        </div>
       </div>
     </div>
 
-    <table style="margin-top:0.4rem;">
-      <thead>
-        <tr>
-          <th>Target Zone</th>
-          <th>Locations</th>
-          <th>Avg STOCC Score</th>
-          <th>Avg Supply Gap</th>
-          <th>Strategic Role</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Z1</td>
-          <td>40</td>
-          <td>39.6</td>
-          <td>-244.4</td>
-          <td>Competitive markets; use for bolt‑on & brand consolidation plays.</td>
-        </tr>
-        <tr>
-          <td>Z2</td>
-          <td>4</td>
-          <td>37.5</td>
-          <td>-67.9</td>
-          <td>Tuck‑in and cluster formation around existing demand centers.</td>
-        </tr>
-        <tr>
-          <td>Z4</td>
-          <td>51</td>
-          <td>99.0</td>
-          <td>+6.5</td>
-          <td>De novo & white‑space platform expansion.</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="note">
-      Z4 sites show positive average Supply Gap and the highest normalized opportunity scores, indicating structurally underserved markets.[file:31]
-    </p>
+    <div class="kpi-strip">
+      <div class="kpi">
+        <div class="kpi-n">23,860</div>
+        <div class="kpi-l">Clinics Mapped</div>
+        <div class="kpi-a">vs. ~11,000 AmSpa 2024 — broader scope</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n">11,393</div>
+        <div class="kpi-l">Qualified Targets</div>
+        <div class="kpi-a">Z1+Z2 operators, 686 CBSAs</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n">20<sup>+</sup></div>
+        <div class="kpi-l">Signals Per Clinic</div>
+        <div class="kpi-a">Supply, staff, digital, ownership, PE proximity</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n">686</div>
+        <div class="kpi-l">CBSAs Analyzed</div>
+        <div class="kpi-a">Full U.S. sub-market coverage</div>
+      </div>
+      <div class="kpi">
+        <div class="kpi-n">&lt;5<sup>%</sup></div>
+        <div class="kpi-l">PE Penetration</div>
+        <div class="kpi-a">Pre-consolidation window open</div>
+      </div>
+    </div>
   </div>
 
-  <div class="footer">
-    <span>Page 1 – Geo‑Intelligence Overview</span>
-    <span>Confidential – For discussion only</span>
+  <!-- 3 methodology panels -->
+  <div class="cap-row">
+    <div class="cap">
+      <div class="cap-num">01 — Operator Universe Mapping</div>
+      <div class="cap-title">23,860 operator profiles across every U.S. CBSA</div>
+      <div class="cap-body">Profiles built from structured extraction of operator websites, Google Business listings, Yelp/Healthgrades reviews, and social accounts. Independent vs. chain vs. PE-backed classification via corporate entity linkage, multi-location URL patterns, and NPI database cross-reference. 93% accuracy on 500-operator validation sample.</div>
+      <div class="cap-divider"></div>
+      <div class="cap-stat"><span class="cap-stat-k">Independent operators</span><span class="cap-stat-v">97%</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">PE-backed identified</span><span class="cap-stat-v">&lt;3%</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">CBSAs analyzed</span><span class="cap-stat-v">686</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Classification accuracy</span><span class="cap-stat-v">93% (n=500)</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Coverage vs. AmSpa 2024</span><span class="cap-stat-v">~2.1x broader</span></div>
+    </div>
+    <div class="cap">
+      <div class="cap-num">02 — Acquisition Target Scoring</div>
+      <div class="cap-title">Every operator ranked by 20+ weighted signals</div>
+      <div class="cap-body">Z1–Z4 zone classification uses supply density per 10K population and demand quality index. STOC composite score weights: supply density 15%, PE proximity 10%, Digital Maturity Score 30%, clinical scale 25%, demand index 20%. 11,393 qualified targets ranked. BCG Medical Aesthetics lead-scoring benchmark: population 20%, HHI 50%, provider size 30%.<sup class="ref">3</sup></div>
+      <div class="cap-divider"></div>
+      <div class="cap-stat"><span class="cap-stat-k">Z1 Platform Anchor CBSAs</span><span class="cap-stat-v" style="color:var(--z1);">40</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Z2 Bolt-on / Cluster CBSAs</span><span class="cap-stat-v" style="color:var(--z2);">4</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Z3 Emerging CBSAs</span><span class="cap-stat-v" style="color:var(--z3);">45+</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Z4 Pass (remaining)</span><span class="cap-stat-v" style="color:var(--z4);">597</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Supply gap threshold</span><span class="cap-stat-v">&lt;0.3 per 10K</span></div>
+    </div>
+    <div class="cap">
+      <div class="cap-num">03 — Market Structure Analysis</div>
+      <div class="cap-title">Competition vs. opportunity mapped for every CBSA</div>
+      <div class="cap-body">Quadrant analysis using supply density and demand quality index (40% median HHI, 30% female 30–60 population, 30% MSA population growth). PE sponsor footprint mapped via PE Neighbors and PE-Weighted Cannibalization Score. 384 CBSAs mapped with fragmentation indices and consolidation runway models.</div>
+      <div class="cap-divider"></div>
+      <div class="cap-stat"><span class="cap-stat-k">EBITDA margins at maturity</span><span class="cap-stat-v">40–60%</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Cash-pay model, no payer risk</span><span class="cap-stat-v" style="color:var(--z2);">Yes</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">TAM CAGR through 2032</span><span class="cap-stat-v">18.6%</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">Markets mapped (competition)</span><span class="cap-stat-v">384 CBSAs</span></div>
+      <div class="cap-stat"><span class="cap-stat-k">National brand &gt;3% share</span><span class="cap-stat-v">None</span></div>
+    </div>
+  </div>
+
+  <div class="thesis">
+    <div class="thesis-label">Platform Investment Thesis</div>
+    <div class="thesis-cols">
+      <div class="thesis-text">The U.S. medical spa market represents a <strong>$44.83B fragmented opportunity</strong> with sub-5% PE penetration, 40–60% cash-pay EBITDA margins, and no dominant national brand. Structural analog to Dental DSO and Dermatology pre-consolidation.</div>
+      <div class="thesis-text">~80M Americans are addressable consumers for aesthetics procedures; <strong>only 15M have had one</strong>.<sup class="ref">1</sup> Gen Z and Millennials — 36% of adult U.S. population — drive 41% of annual wellness spend and are aging into the core demographic.<sup class="ref">2</sup></div>
+      <div class="thesis-text">STOC's proprietary STOC framework identifies <strong>11,393 qualified targets</strong> across 686 CBSAs, scored across 20+ supply, digital, and ownership signals (93% classification accuracy). Full dataset available on request.</div>
+    </div>
+  </div>
+
+  <div class="fn-bar">
+    <div class="fn"><span class="fn-n">1</span><span>BCG "Medical Aesthetics Is Resilient, Growing, and Attracting Investors" (2023). Consumer Sentiment Survey, n=2,900. 15M Americans have had a procedure; ~80M are demographically addressable.</span></div>
+    <div class="fn"><span class="fn-n">2</span><span>McKinsey "Future of Wellness" (2025). 5,000+ consumer survey across 3 countries. Gen Z/Millennials = 36% of adult U.S. pop., 41% of annual wellness spend.</span></div>
+    <div class="fn"><span class="fn-n">3</span><span>BCG "Five Growth Imperatives for Medical Aesthetics" (2025). Lead-scoring weights: population 20%, household income 50%, provider size 30%. Survey: 900 providers, 2,900 consumers.</span></div>
+  </div>
+
+  <div class="foot">
+    <span>STOC Advisory — Confidential — Not for Distribution</span>
+    <span>Data: STOC Advisory proprietary database, n=23,860 operators, 686 CBSAs</span>
+    <span>Page 01 of 05</span>
   </div>
 </div>
 
-<!-- PAGE 2 -->
-<div class="page">
 
-  <!-- Header / Continuation -->
-  <div class="flex-row" style="align-items:flex-start; justify-content:space-between;">
-    <div class="flex-col flex-2">
-      <h1>Med Spa Geo‑Intelligence</h1>
-      <p class="tagline">
-        STOCC Opportunity Score, Digital Maturity, and CBSA‑level playbook for PE sponsors.
-      </p>
-    </div>
-    <div class="flex-col" style="align-items:flex-end;">
-      <span class="pill pill-blue">Page 2 – Scoring & Playbook</span>
+<!-- ═══════════════════════════════════
+     PAGE 2 — MARKET INTELLIGENCE
+═══════════════════════════════════ -->
+<div class="page" id="p2">
+  <div class="mast">
+    <div class="mast-brand">STOC <span>Advisory</span></div>
+    <div class="mast-title">Market Intelligence — Operator Universe and Regional Analysis</div>
+    <div class="mast-right">
+      <span class="conf-badge">Confidential</span>
+      <span class="pg-num">02 / 05</span>
     </div>
   </div>
 
-  <!-- STOCC Opportunity Score -->
-  <div class="section">
-    <h2>STOCC Opportunity Score (1–100)</h2>
-    <p>
-      STOCC is a normalized geo‑index that combines Supply Gap, local population (by ZIP/CBSA), and presence of PE‑backed providers to rank markets from 1–100; higher scores indicate better acquisition or de novo potential.[file:31]
-    </p>
-    <p>
-      In this sample, Prime Opportunity sites average a STOCC Score of 99, highlighting a robust pool of high‑conviction markets for platform building and de novo rollout.[file:31]
-    </p>
+  <div class="mkt-banner">
+    <div>
+      <div class="mkt-hed">$44.83B projected by 2032</div>
+      <div class="mkt-sub">18.6% CAGR — injectables growing 7%; skin tightening 12%<sup class="ref">3</sup></div>
+    </div>
+    <div style="margin-left:auto;display:flex;gap:8px;flex-wrap:wrap;">
+      <div class="tag"><span class="tag-dot" style="background:var(--z2)"></span>40–60% EBITDA at maturity</div>
+      <div class="tag"><span class="tag-dot" style="background:var(--accent)"></span>Sub-5% PE penetration</div>
+      <div class="tag"><span class="tag-dot" style="background:var(--navy)"></span>No national brand &gt;3% share</div>
+    </div>
+  </div>
 
-    <table>
+  <div class="body">
+
+    <!-- Figure 2.A — Regional bar chart -->
+    <div class="g60" style="margin-bottom:20px;">
+      <div>
+        <div class="sec">
+          <div class="sec-fig">Figure 2.A</div>
+          <div class="sec-title">South and Midwest clear the qualified-target threshold; West significantly lags</div>
+          <div class="sec-sub">Avg. STOC Geo Score by region — threshold at 75 indicates qualified acquisition market. Note: South 77 vs. Midwest 76 is a 1-point gap, not a meaningful rank difference at this aggregation level.</div>
+        </div>
+        <div class="chart-frame" style="margin-top:10px;">
+          <div style="position:relative;margin:14px 0 6px 0;">
+            <div class="bars">
+              <div class="bar-row">
+                <div class="bar-lbl" style="color:var(--rS);">South</div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width:77%;background:var(--rS);"></div>
+                  <span class="bar-val">77</span>
+                  <div class="thr-line" style="left:75%;"><span class="thr-lbl">75 threshold</span></div>
+                </div>
+                <div class="bar-ann">n=218 CBSAs</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-lbl" style="color:var(--rMW);">Midwest</div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width:76%;background:var(--rMW);"></div>
+                  <span class="bar-val">76</span>
+                  <div class="thr-line" style="left:75%;"></div>
+                </div>
+                <div class="bar-ann">n=142 CBSAs</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-lbl" style="color:var(--rNE);">Northeast</div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width:67%;background:var(--rNE);"></div>
+                  <span class="bar-val">67</span>
+                  <div class="thr-line" style="left:75%;"></div>
+                </div>
+                <div class="bar-ann">n=124 CBSAs</div>
+              </div>
+              <div class="bar-row">
+                <div class="bar-lbl" style="color:var(--rW);">West</div>
+                <div class="bar-track">
+                  <div class="bar-fill" style="width:50%;background:var(--rW);"></div>
+                  <span class="bar-val">50</span>
+                  <div class="thr-line" style="left:75%;"></div>
+                </div>
+                <div class="bar-ann">n=202 CBSAs</div>
+              </div>
+            </div>
+          </div>
+          <div class="src">Source: STOC Advisory STOC database, n=686 CBSAs. Score composite: supply density 50%, PE concentration 20%, market type 30%. Threshold = 75.</div>
+        </div>
+      </div>
+
+      <!-- Regional table -->
+      <div>
+        <div class="sec">
+          <div class="sec-fig">Figure 2.B</div>
+          <div class="sec-title">South leads in total operators and target pool; West has highest supply density</div>
+        </div>
+        <table class="tbl" style="margin-top:10px;">
+          <thead>
+            <tr>
+              <th>Region</th>
+              <th class="r">Operators</th>
+              <th class="r">STOC</th>
+              <th class="r">Z1+Z2</th>
+              <th class="r">Density/10K</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="reg"><span class="reg-dot" style="background:var(--rS);"></span>South</span></td>
+              <td class="r">8,870</td>
+              <td class="r"><strong>77</strong></td>
+              <td class="r bold">3,027</td>
+              <td class="r">0.28</td>
+            </tr>
+            <tr>
+              <td><span class="reg"><span class="reg-dot" style="background:var(--rMW);"></span>Midwest</span></td>
+              <td class="r">5,173</td>
+              <td class="r"><strong>76</strong></td>
+              <td class="r bold">1,934</td>
+              <td class="r">0.31</td>
+            </tr>
+            <tr>
+              <td><span class="reg"><span class="reg-dot" style="background:var(--rNE);"></span>Northeast</span></td>
+              <td class="r">3,372</td>
+              <td class="r">67</td>
+              <td class="r">1,759</td>
+              <td class="r">0.52</td>
+            </tr>
+            <tr>
+              <td><span class="reg"><span class="reg-dot" style="background:var(--rW);"></span>West</span></td>
+              <td class="r">6,445</td>
+              <td class="r" style="color:var(--z4);">50</td>
+              <td class="r">4,673</td>
+              <td class="r" style="color:var(--z4);">0.74</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="src" style="margin-top:6px;">Source: STOC Advisory proprietary database, n=23,860 operators. Supply density = STOC-identified operators / MSA population x 10,000. Undersupplied: &lt;0.3/10K. Saturated: &gt;0.7/10K.</div>
+
+        <div class="insight" style="margin-top:14px;">
+          <div class="insight-lbl">Regional Insight</div>
+          <div class="insight-body">The West's score of 50 is the signal. High existing supply density (0.74/10K) and elevated PE penetration compress white space significantly. The South leads on Z4 de novo potential — 7 of the top 10 white space CBSAs are Southern markets.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rule-nav"></div>
+
+    <!-- Zone Framework -->
+    <div class="sec" style="margin-bottom:10px;">
+      <div class="sec-fig">Figure 2.C</div>
+      <div class="sec-title">Zone classification — supply density and demand quality determine every CBSA's investment thesis</div>
+      <div class="sec-sub">686 CBSAs classified. Thresholds are explicit and auditable — not opaque assignments. Low supply density alone does not qualify a market; demand quality filters must also clear.</div>
+    </div>
+
+    <div class="zone-grid" style="margin-bottom:16px;">
+      <div class="zone-card" style="border-top:3px solid var(--z1);">
+        <div class="zone-n">40</div>
+        <div class="zone-code" style="color:var(--z1);">Z1</div>
+        <div class="zone-name">Platform Anchor</div>
+        <div class="zone-desc">Supply &lt;0.3/10K, demand index &gt;60. Primary de novo and anchor platform markets. 40 CBSAs identified at core threshold.</div>
+      </div>
+      <div class="zone-card" style="border-top:3px solid var(--z2);">
+        <div class="zone-n">4</div>
+        <div class="zone-code" style="color:var(--z2);">Z2</div>
+        <div class="zone-name">Bolt-on / Cluster</div>
+        <div class="zone-desc">Supply 0.3–0.5/10K, demand &gt;60. Viable for cluster builds and tuck-in acquisitions. 4 CBSAs at core Z2 threshold.</div>
+      </div>
+      <div class="zone-card" style="border-top:3px solid var(--z3);">
+        <div class="zone-n">45+</div>
+        <div class="zone-code" style="color:var(--z3);">Z3</div>
+        <div class="zone-name">Emerging</div>
+        <div class="zone-desc">Low supply, demand 40–60. Demographic tailwinds present but insufficient current HHI for PE-scale platform build today.</div>
+      </div>
+      <div class="zone-card" style="border-top:3px solid var(--z4);">
+        <div class="zone-n">597</div>
+        <div class="zone-code" style="color:var(--z4);">Z4</div>
+        <div class="zone-name">Pass</div>
+        <div class="zone-desc">Supply &gt;0.5/10K or demand &lt;40. Remaining 597 CBSAs: either oversupplied or demographically insufficient for PE platform.</div>
+      </div>
+    </div>
+
+    <!-- Zone quadrant SVG -->
+    <div class="g2" style="margin-bottom:16px;">
+      <div class="chart-frame">
+        <div class="chart-fig">Figure 2.D — Zone Classification Matrix</div>
+        <div class="chart-title">Supply density x demand quality — thresholds labeled</div>
+        <div class="chart-sub">X: supply density (providers/10K). Y: demand quality index (HHI 40% + female 30-60 30% + MSA growth 30%). Each quadrant = one zone.</div>
+        <svg viewBox="0 0 420 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;margin-top:6px;">
+          <!-- Quadrant fills -->
+          <rect x="58" y="18" width="160" height="116" fill="rgba(26,86,219,0.05)"/>
+          <rect x="218" y="18" width="172" height="116" fill="rgba(5,122,85,0.04)"/>
+          <rect x="58" y="134" width="160" height="108" fill="rgba(194,120,3,0.04)"/>
+          <rect x="218" y="134" width="172" height="108" fill="rgba(200,30,30,0.04)"/>
+          <!-- Border -->
+          <rect x="58" y="18" width="332" height="224" fill="none" stroke="#D1D5DB" stroke-width="0.5"/>
+          <!-- Dividers -->
+          <line x1="58" y1="134" x2="390" y2="134" stroke="#D1D5DB" stroke-width="0.8" stroke-dasharray="4,3"/>
+          <line x1="218" y1="18" x2="218" y2="242" stroke="#D1D5DB" stroke-width="0.8" stroke-dasharray="4,3"/>
+          <!-- Axis threshold labels -->
+          <rect x="206" y="11" width="24" height="9" fill="white"/>
+          <text x="218" y="18" text-anchor="middle" font-family="Barlow Condensed" font-size="7.5" fill="#C81E1E" font-weight="700">0.3/10K</text>
+          <rect x="45" y="129" width="14" height="9" fill="white"/>
+          <text x="52" y="137" text-anchor="middle" font-family="Barlow Condensed" font-size="7.5" fill="#C81E1E" font-weight="700">60</text>
+          <!-- Quadrant labels -->
+          <text x="138" y="34" text-anchor="middle" font-family="Barlow Condensed" font-size="8" font-weight="700" fill="#1A56DB" letter-spacing="0.5">Z1 — PLATFORM ANCHOR</text>
+          <text x="304" y="34" text-anchor="middle" font-family="Barlow Condensed" font-size="8" font-weight="700" fill="#057A55" letter-spacing="0.5">Z2 — BOLT-ON</text>
+          <text x="138" y="153" text-anchor="middle" font-family="Barlow Condensed" font-size="8" font-weight="700" fill="#C27803" letter-spacing="0.5">Z3 — EMERGING</text>
+          <text x="304" y="153" text-anchor="middle" font-family="Barlow Condensed" font-size="8" font-weight="700" fill="#C81E1E" letter-spacing="0.5">Z4 — PASS</text>
+          <!-- Sample data dots -->
+          <circle cx="100" cy="70" r="5" fill="rgba(26,86,219,0.65)" stroke="white" stroke-width="1.2"/>
+          <circle cx="148" cy="85" r="7" fill="rgba(26,86,219,0.68)" stroke="white" stroke-width="1.2"/>
+          <circle cx="178" cy="55" r="5" fill="rgba(26,86,219,0.6)" stroke="white" stroke-width="1"/>
+          <circle cx="80" cy="105" r="4" fill="rgba(26,86,219,0.55)" stroke="white" stroke-width="1"/>
+          <circle cx="200" cy="95" r="5" fill="rgba(26,86,219,0.6)" stroke="white" stroke-width="1"/>
+          <text x="148" y="73" text-anchor="middle" font-family="Barlow" font-size="6" fill="#1A56DB" font-weight="600">Columbus, GA</text>
+          <circle cx="255" cy="68" r="5" fill="rgba(5,122,85,0.62)" stroke="white" stroke-width="1"/>
+          <circle cx="310" cy="58" r="6" fill="rgba(5,122,85,0.6)" stroke="white" stroke-width="1"/>
+          <circle cx="350" cy="90" r="4" fill="rgba(5,122,85,0.55)" stroke="white" stroke-width="1"/>
+          <circle cx="125" cy="185" r="4" fill="rgba(194,120,3,0.58)" stroke="white" stroke-width="1"/>
+          <circle cx="185" cy="210" r="4" fill="rgba(194,120,3,0.52)" stroke="white" stroke-width="1"/>
+          <circle cx="285" cy="192" r="5" fill="rgba(200,30,30,0.5)" stroke="white" stroke-width="1"/>
+          <circle cx="355" cy="218" r="6" fill="rgba(200,30,30,0.48)" stroke="white" stroke-width="1"/>
+          <!-- Axes -->
+          <line x1="58" y1="242" x2="390" y2="242" stroke="#D1D5DB" stroke-width="0.8"/>
+          <line x1="58" y1="18" x2="58" y2="242" stroke="#D1D5DB" stroke-width="0.8"/>
+          <!-- Axis tick labels -->
+          <text x="58" y="253" text-anchor="middle" font-family="Barlow Condensed" font-size="7" fill="#9CA3AF">0.0</text>
+          <text x="218" y="253" text-anchor="middle" font-family="Barlow Condensed" font-size="7" fill="#C81E1E" font-weight="700">0.3</text>
+          <text x="390" y="253" text-anchor="middle" font-family="Barlow Condensed" font-size="7" fill="#9CA3AF">0.8+</text>
+          <text x="50" y="242" text-anchor="end" font-family="Barlow Condensed" font-size="7" fill="#9CA3AF">0</text>
+          <text x="50" y="20" text-anchor="end" font-family="Barlow Condensed" font-size="7" fill="#9CA3AF">100</text>
+          <!-- Axis titles -->
+          <text x="224" y="264" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="#6B7280">Supply density (providers per 10K population)</text>
+          <text x="14" y="130" text-anchor="middle" font-family="Barlow" font-size="7.5" fill="#6B7280" transform="rotate(-90,14,130)">Demand quality index</text>
+        </svg>
+        <div class="src">Source: STOC Advisory, n=686 CBSAs. Supply density = col BD. Demand = 40% HHI + 30% female 30–60 share + 30% MSA pop. growth. Zone = col AX.</div>
+      </div>
+
+      <div>
+        <!-- Consumer TAM waterfall -->
+        <div class="sec" style="margin-bottom:8px;">
+          <div class="sec-fig">Figure 2.E — Consumer TAM Waterfall</div>
+          <div class="sec-title">Only 15M of 80M addressable consumers have ever had a procedure</div>
+          <div class="sec-sub">Penetration gap is the demand thesis. Addressable = HHI &gt;$50K + female 25–65 demographic profile.</div>
+        </div>
+        <div class="chart-frame">
+          <div style="display:flex;flex-direction:column;gap:7px;margin:8px 0;">
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="font-size:9px;color:var(--ink-3);width:130px;flex-shrink:0;">U.S. adult population</div>
+              <div style="flex:1;height:16px;background:var(--bg-2);border:1px solid var(--rule-lt);position:relative;"><div style="width:100%;height:100%;background:var(--navy);opacity:0.2;"></div></div>
+              <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--navy);width:34px;text-align:right;">260M</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="font-size:9px;color:var(--ink-3);width:130px;flex-shrink:0;">Demographically addressable</div>
+              <div style="flex:1;height:16px;background:var(--bg-2);border:1px solid var(--rule-lt);position:relative;"><div style="width:31%;height:100%;background:var(--navy);opacity:0.45;"></div></div>
+              <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--navy);width:34px;text-align:right;">~80M</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="font-size:9px;color:var(--ink-3);width:130px;flex-shrink:0;">Aware and considering</div>
+              <div style="flex:1;height:16px;background:var(--bg-2);border:1px solid var(--rule-lt);position:relative;"><div style="width:18%;height:100%;background:var(--accent);opacity:0.55;"></div></div>
+              <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--navy);width:34px;text-align:right;">~46M</div>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;">
+              <div style="font-size:9px;font-weight:700;color:var(--navy);width:130px;flex-shrink:0;">Have had a procedure</div>
+              <div style="flex:1;height:16px;background:var(--bg-2);border:1px solid var(--rule-lt);position:relative;"><div style="width:6%;height:100%;background:var(--accent);"></div></div>
+              <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--accent);width:34px;text-align:right;">15M</div>
+            </div>
+          </div>
+          <div style="background:var(--accent-lt);border:1px solid rgba(32,96,216,0.15);padding:7px 9px;margin-top:6px;font-size:8.5px;color:var(--ink-2);line-height:1.55;"><strong>65M untapped consumers</strong> are addressable but have not had a procedure. Gen Z and Millennials drive 41% of wellness spend and are aging into the core aesthetics demographic.<sup class="ref">2</sup></div>
+          <div class="src">Sources: BCG Medical Aesthetics Consumer Sentiment Survey 2023 (n=2,900).<sup class="ref">1</sup> McKinsey "Future of Wellness" (2025).<sup class="ref">2</sup></div>
+        </div>
+
+        <!-- Risk matrix -->
+        <div class="sec" style="margin:14px 0 7px;">
+          <div class="sec-fig">Figure 2.F — Investment Risk Assessment</div>
+          <div class="sec-title">Exposure profile — Harris Williams healthcare risk framework<sup class="ref">4</sup></div>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th style="width:130px;">Factor</th>
+              <th class="c" style="width:70px;">Rating</th>
+              <th>Commentary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Labor Market</td>
+              <td class="c" style="color:var(--z3);font-weight:700;">MODERATE</td>
+              <td style="font-size:8.5px;color:var(--ink-3);">NP/PA shortage could pressure margins; aesthetician availability partially mitigates</td>
+            </tr>
+            <tr>
+              <td>Inflation</td>
+              <td class="c" style="color:var(--z2);font-weight:700;">LOW</td>
+              <td style="font-size:8.5px;color:var(--ink-3);">Cash-pay pricing is self-adjusting; cost pass-through well-documented in injectables</td>
+            </tr>
+            <tr>
+              <td>Consumer Spend</td>
+              <td class="c" style="color:var(--z2);font-weight:700;">LOW-MOD</td>
+              <td style="font-size:8.5px;color:var(--ink-3);">Proven recession resilience; 2020 dip fully recovered by Q2 2021<sup class="ref">1</sup></td>
+            </tr>
+            <tr>
+              <td>Capital Spend</td>
+              <td class="c" style="color:var(--z3);font-weight:700;">MODERATE</td>
+              <td style="font-size:8.5px;color:var(--ink-3);">Equipment refresh cycle 3–5 years; laser/device capex manageable at scale</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Top de novo table -->
+    <div class="sec" style="margin-bottom:8px;">
+      <div class="sec-fig">Figure 2.G</div>
+      <div class="sec-title">Top de novo candidates combine supply gap with affluent demographics and population scale</div>
+      <div class="sec-sub">Ranked by STOC Opportunity Score. Full demographic context: MSA population, median HHI, operator count, supply density, zone, and key thesis driver.</div>
+    </div>
+
+    <table class="tbl">
       <thead>
         <tr>
-          <th>CBSA (Top 10 by STOCC)</th>
+          <th style="width:22px;">#</th>
+          <th>CBSA Market</th>
           <th>Region</th>
-          <th>Market Type</th>
-          <th>Target Zone</th>
-          <th>STOCC Score</th>
-          <th>Opportunity</th>
-          <th># Locations</th>
+          <th class="r">MSA Pop.</th>
+          <th class="r">Median HHI</th>
+          <th class="r">Operators</th>
+          <th class="r">Density/10K</th>
+          <th class="r">STOC</th>
+          <th class="c">Zone</th>
+          <th>Key Thesis</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Albany‑Schenectady‑Troy, NY</td>
-          <td>Northeast</td>
-          <td>Mid‑Density</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Asheville, NC</td>
-          <td>South</td>
-          <td>Mid‑Density</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Baltimore‑Columbia‑Towson, MD</td>
-          <td>South</td>
-          <td>Mid‑Density</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Chicago‑Naperville‑Elgin, IL‑IN‑WI</td>
-          <td>Midwest</td>
-          <td>Dense Urban</td>
-          <td>Z1</td>
-          <td>99</td>
-          <td>Monitor</td>
-          <td>5</td>
-        </tr>
-        <tr>
-          <td>Boston‑Cambridge‑Newton, MA‑NH</td>
-          <td>Northeast</td>
-          <td>Dense Urban</td>
-          <td>Z1</td>
-          <td>99</td>
-          <td>Monitor</td>
-          <td>4</td>
-        </tr>
-        <tr>
-          <td>Charleston‑North Charleston, SC</td>
-          <td>South</td>
-          <td>Mid‑Density</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>3</td>
-        </tr>
-        <tr>
-          <td>Huntington‑Ashland, WV‑KY‑OH</td>
-          <td>South</td>
-          <td>Suburban</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Hilton Head Island‑Bluffton, SC</td>
-          <td>South</td>
-          <td>Dense Urban</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td>Hartford‑East Hartford‑Middletown, CT</td>
-          <td>Northeast</td>
-          <td>Mid‑Density</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>1</td>
-        </tr>
-        <tr>
-          <td>Greenville‑Anderson, SC</td>
-          <td>South</td>
-          <td>Mid‑Density</td>
-          <td>Z4</td>
-          <td>99</td>
-          <td>Prime Opportunity</td>
-          <td>2</td>
-        </tr>
+        <tr><td class="dim">1</td><td class="bold">Clarksville, TN-KY</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">309K</td><td class="r">$58K</td><td class="r">8</td><td class="r">0.26</td><td class="r"><span class="score">94</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Fast-growing suburb, military community, no PE within 40mi</td></tr>
+        <tr><td class="dim">2</td><td class="bold">Greenville, NC</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">176K</td><td class="r">$52K</td><td class="r">5</td><td class="r">0.28</td><td class="r"><span class="score">91</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">University + medical hub, significantly underserved</td></tr>
+        <tr><td class="dim">3</td><td class="bold">Twin Falls, ID</td><td><span style="color:var(--rW);font-weight:600;font-size:9px;">West</span></td><td class="r">118K</td><td class="r">$55K</td><td class="r">3</td><td class="r">0.25</td><td class="r"><span class="score">90</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Regional hub, zero PE competition identified</td></tr>
+        <tr><td class="dim">4</td><td class="bold">Jacksonville, NC</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">198K</td><td class="r">$54K</td><td class="r">6</td><td class="r">0.30</td><td class="r"><span class="score hi">87</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Military community, stable cash-pay base</td></tr>
+        <tr><td class="dim">5</td><td class="bold">Corpus Christi, TX</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">431K</td><td class="r">$57K</td><td class="r">13</td><td class="r">0.30</td><td class="r"><span class="score hi">86</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Large southern market, below density threshold</td></tr>
+        <tr><td class="dim">6</td><td class="bold">Kennewick-Richland, WA</td><td><span style="color:var(--rW);font-weight:600;font-size:9px;">West</span></td><td class="r">301K</td><td class="r">$61K</td><td class="r">8</td><td class="r">0.27</td><td class="r"><span class="score hi">85</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Mid-density, growing tech/energy workforce</td></tr>
+        <tr><td class="dim">7</td><td class="bold">Amarillo, TX</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">265K</td><td class="r">$59K</td><td class="r">7</td><td class="r">0.26</td><td class="r"><span class="score hi">83</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Regional hub, high supply gap</td></tr>
+        <tr><td class="dim">8</td><td class="bold">Salisbury, MD-DE</td><td><span style="color:var(--rNE);font-weight:600;font-size:9px;">Northeast</span></td><td class="r">160K</td><td class="r">$63K</td><td class="r">5</td><td class="r">0.31</td><td class="r"><span class="score hi">82</span></td><td class="c"><span class="pill pill-z2">Z2</span></td><td style="font-size:8.5px;color:var(--ink-3);">Coastal suburban, affluent, low competition</td></tr>
+        <tr><td class="dim">9</td><td class="bold">Richmond-Berea, KY</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">132K</td><td class="r">$48K</td><td class="r">4</td><td class="r">0.30</td><td class="r"><span class="score hi">81</span></td><td class="c"><span class="pill pill-z1">Z1</span></td><td style="font-size:8.5px;color:var(--ink-3);">Growth corridor — HHI below $55K preferred minimum</td></tr>
+        <tr><td class="dim">10</td><td class="bold">Brownsville, TX</td><td><span style="color:var(--rS);font-weight:600;font-size:9px;">South</span></td><td class="r">421K</td><td class="r">$42K</td><td class="r">9</td><td class="r">0.21</td><td class="r"><span class="score hi">80</span></td><td class="c"><span class="pill pill-z3">Z3</span></td><td style="font-size:8.5px;color:var(--z4);">Large size, high gap — HHI $42K insufficient for platform</td></tr>
       </tbody>
     </table>
+    <div class="src" style="margin-top:5px;">Source: STOC Advisory proprietary database. Ranked by STOC composite score (col BI). MSA Pop. = col AD. Median HHI = U.S. Census ACS 2023. Operators = col U. Density/10K = col BD. Zone = col AX. Note: Brownsville classified Z3 due to HHI $42K despite large size and low density.</div>
 
-    <div class="callout">
-      <strong>De Novo Illustration (Z4):</strong><br/>
-      Longview, TX; Pueblo, CO; and Virginia Beach–Norfolk–Newport News, VA‑NC all exhibit positive Supply Gaps with STOCC Scores of 99, signaling structurally underserved markets ideal for de novo builds.[file:31]
+  </div>
+
+  <div class="fn-bar">
+    <div class="fn"><span class="fn-n">1</span><span>BCG Medical Aesthetics Consumer Sentiment Survey 2023 (n=2,900). 15M Americans have had a procedure; ~80M demographically addressable.</span></div>
+    <div class="fn"><span class="fn-n">4</span><span>Harris Williams "Healthcare Market Update and Vertical Perspectives" (2023). Risk framework: labor, inflation, consumer spending, capital spending — applied to med spa vertical.</span></div>
+  </div>
+
+  <div class="foot">
+    <span>STOC Advisory — Confidential — Not for Distribution</span>
+    <span>Figures 2.A–2.G | Data: STOC Advisory cols BD, BG, BI, AX, AD, U, G; Census ACS 2023</span>
+    <span>Page 02 of 05</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     PAGE 3 — COMPETITION vs. OPPORTUNITY
+═══════════════════════════════════ -->
+<div class="page" id="p3">
+  <div class="mast">
+    <div class="mast-brand">STOC <span>Advisory</span></div>
+    <div class="mast-title">Competition vs. Opportunity — Full Landscape Analysis</div>
+    <div class="mast-right">
+      <span class="conf-badge">Confidential</span>
+      <span class="pg-num">03 / 05</span>
     </div>
   </div>
 
-  <!-- Digital Maturity -->
-  <div class="section">
-    <h2>Digital Maturity Score (Z1 & Z2 Only)</h2>
-    <p>
-      Digital Maturity (0–100) is calculated only for Z1 and Z2 targets and combines Google review volume and rating with social media activity to quantify brand strength and digital acquisition readiness.[file:31]
-    </p>
-    <p>
-      High Digital Maturity in saturated (Z1) and tuck‑in (Z2) markets signals locations that can be plugged into a platform with lower incremental marketing spend and faster ramp.[file:31]
-    </p>
+  <div class="body">
 
-    <table>
-      <thead>
-        <tr>
-          <th>Company</th>
-          <th>CBSA</th>
-          <th>Zone</th>
-          <th>Digital Maturity</th>
-          <th>Label</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Elysium Aesthetics and Vein Care: David Singh, MD</td>
-          <td>New York‑Newark‑Jersey City, NY‑NJ‑PA</td>
-          <td>Z1</td>
-          <td>98</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>Montclair Rejuvenation Center</td>
-          <td>New York‑Newark‑Jersey City, NY‑NJ‑PA</td>
-          <td>Z1</td>
-          <td>93</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>Natural Contour Aesthetics</td>
-          <td>Ocean City, NJ</td>
-          <td>Z2</td>
-          <td>92</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>Elite Medspa + Wellness Center</td>
-          <td>Boston‑Cambridge‑Newton, MA‑NH</td>
-          <td>Z1</td>
-          <td>88</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>PRANA Beauty &amp; Beyond</td>
-          <td>Manchester‑Nashua, NH</td>
-          <td>Z1</td>
-          <td>86</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>Hollyday Med Spa + Aesthetics</td>
-          <td>Kansas City, MO‑KS</td>
-          <td>Z1</td>
-          <td>85</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>Ideal Image Tampa</td>
-          <td>Tampa‑St. Petersburg‑Clearwater, FL</td>
-          <td>Z1</td>
-          <td>83</td>
-          <td>Monitor</td>
-        </tr>
-        <tr>
-          <td>Lov MedSpa New York</td>
-          <td>New York‑Newark‑Jersey City, NY‑NJ‑PA</td>
-          <td>Z1</td>
-          <td>81</td>
-          <td>Monitor</td>
-        </tr>
-      </tbody>
-    </table>
-    <p class="note">
-      There are 13 Z1/Z2 locations with Digital Maturity &gt; 70 in this dataset, forming a strong pool of digitally advanced bolt‑on candidates.[file:31]
-    </p>
+    <!-- Scatter -->
+    <div class="sec" style="margin-bottom:8px;">
+      <div class="sec-fig">Figure 3.A</div>
+      <div class="sec-title">Undersupplied affluent markets in the South and Midwest are the platform-building opportunity</div>
+      <div class="sec-sub">Supply density (providers/10K) vs. market demand quality index. Bubble size = STOC-qualified targets in CBSA. Color = zone classification. Top markets labeled.</div>
+    </div>
+
+    <div class="chart-frame" style="margin-bottom:20px;">
+      <svg viewBox="0 0 860 400" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;">
+        <!-- Background -->
+        <rect x="70" y="20" width="748" height="332" fill="#FAFAF8" stroke="#D1D5DB" stroke-width="0.5"/>
+        <!-- Quadrant fills -->
+        <rect x="70" y="20" width="374" height="166" fill="rgba(26,86,219,0.04)"/>
+        <rect x="444" y="20" width="374" height="166" fill="rgba(5,122,85,0.03)"/>
+        <rect x="70" y="186" width="374" height="166" fill="rgba(194,120,3,0.03)"/>
+        <rect x="444" y="186" width="374" height="166" fill="rgba(200,30,30,0.03)"/>
+        <!-- Threshold lines -->
+        <line x1="444" y1="20" x2="444" y2="352" stroke="#C81E1E" stroke-width="0.8" stroke-dasharray="5,3" opacity="0.6"/>
+        <line x1="702" y1="20" x2="702" y2="352" stroke="#9CA3AF" stroke-width="0.6" stroke-dasharray="3,4" opacity="0.5"/>
+        <line x1="70" y1="186" x2="818" y2="186" stroke="#C81E1E" stroke-width="0.8" stroke-dasharray="5,3" opacity="0.6"/>
+        <!-- Threshold labels -->
+        <rect x="432" y="13" width="24" height="9" fill="white"/>
+        <text x="444" y="20" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#C81E1E" font-weight="700">0.3</text>
+        <rect x="690" y="13" width="24" height="9" fill="white"/>
+        <text x="703" y="20" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.8</text>
+        <rect x="56" y="181" width="15" height="9" fill="white"/>
+        <text x="64" y="188" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#C81E1E" font-weight="700">60</text>
+        <!-- Quadrant labels -->
+        <text x="257" y="36" text-anchor="middle" font-family="Barlow Condensed" font-size="9" font-weight="700" fill="#1A56DB" letter-spacing="0.8">Z1 — PLATFORM ANCHOR</text>
+        <text x="631" y="36" text-anchor="middle" font-family="Barlow Condensed" font-size="9" font-weight="700" fill="#057A55" letter-spacing="0.8">Z2 — BOLT-ON / CLUSTER</text>
+        <text x="257" y="206" text-anchor="middle" font-family="Barlow Condensed" font-size="9" font-weight="700" fill="#C27803" letter-spacing="0.8">Z3 — EMERGING</text>
+        <text x="631" y="206" text-anchor="middle" font-family="Barlow Condensed" font-size="9" font-weight="700" fill="#C81E1E" letter-spacing="0.8">Z4 — PASS</text>
+        <!-- Z1 data dots -->
+        <circle cx="168" cy="74" r="11" fill="rgba(26,86,219,0.62)" stroke="white" stroke-width="1.5"/>
+        <circle cx="248" cy="96" r="8" fill="rgba(26,86,219,0.58)" stroke="white" stroke-width="1"/>
+        <circle cx="305" cy="62" r="9" fill="rgba(26,86,219,0.62)" stroke="white" stroke-width="1.5"/>
+        <circle cx="128" cy="138" r="7" fill="rgba(26,86,219,0.55)" stroke="white" stroke-width="1"/>
+        <circle cx="378" cy="88" r="8" fill="rgba(26,86,219,0.58)" stroke="white" stroke-width="1.5"/>
+        <circle cx="195" cy="148" r="9" fill="rgba(26,86,219,0.58)" stroke="white" stroke-width="1.5"/>
+        <circle cx="90" cy="65" r="6" fill="rgba(26,86,219,0.52)" stroke="white" stroke-width="1"/>
+        <text x="168" y="62" text-anchor="middle" font-family="Barlow" font-size="7" fill="#1A56DB" font-weight="600">Clarksville, TN</text>
+        <text x="307" y="50" text-anchor="middle" font-family="Barlow" font-size="7" fill="#1A56DB" font-weight="600">Greenville, NC</text>
+        <text x="195" y="136" text-anchor="middle" font-family="Barlow" font-size="7" fill="#1A56DB" font-weight="600">Columbus, GA-AL</text>
+        <text x="378" y="75" text-anchor="middle" font-family="Barlow" font-size="7" fill="#1A56DB" font-weight="600">Kennewick, WA</text>
+        <!-- Z2 dots -->
+        <circle cx="500" cy="80" r="13" fill="rgba(5,122,85,0.58)" stroke="white" stroke-width="1.5"/>
+        <circle cx="590" cy="65" r="9" fill="rgba(5,122,85,0.55)" stroke="white" stroke-width="1"/>
+        <circle cx="548" cy="148" r="7" fill="rgba(5,122,85,0.52)" stroke="white" stroke-width="1"/>
+        <circle cx="642" cy="108" r="11" fill="rgba(5,122,85,0.58)" stroke="white" stroke-width="1.5"/>
+        <text x="500" y="67" text-anchor="middle" font-family="Barlow" font-size="7" fill="#057A55" font-weight="600">Fort Collins, CO</text>
+        <text x="642" y="95" text-anchor="middle" font-family="Barlow" font-size="7" fill="#057A55" font-weight="600">Richmond, VA</text>
+        <!-- Z3 dots -->
+        <circle cx="150" cy="272" r="5" fill="rgba(194,120,3,0.55)" stroke="white" stroke-width="1"/>
+        <circle cx="228" cy="302" r="5" fill="rgba(194,120,3,0.5)" stroke="white" stroke-width="1"/>
+        <circle cx="300" cy="328" r="5" fill="rgba(194,120,3,0.48)" stroke="white" stroke-width="1"/>
+        <text x="228" y="292" text-anchor="middle" font-family="Barlow" font-size="7" fill="#C27803" font-weight="600">Twin Falls, ID</text>
+        <!-- Z4 dots -->
+        <circle cx="528" cy="275" r="8" fill="rgba(200,30,30,0.45)" stroke="white" stroke-width="1"/>
+        <circle cx="608" cy="308" r="6" fill="rgba(200,30,30,0.4)" stroke="white" stroke-width="1"/>
+        <circle cx="694" cy="262" r="10" fill="rgba(200,30,30,0.45)" stroke="white" stroke-width="1"/>
+        <circle cx="748" cy="328" r="7" fill="rgba(200,30,30,0.4)" stroke="white" stroke-width="1"/>
+        <circle cx="798" cy="288" r="5" fill="rgba(200,30,30,0.35)" stroke="white" stroke-width="1"/>
+        <!-- Axes -->
+        <line x1="70" y1="352" x2="818" y2="352" stroke="#D1D5DB" stroke-width="0.8"/>
+        <line x1="70" y1="20" x2="70" y2="352" stroke="#D1D5DB" stroke-width="0.8"/>
+        <!-- Axis ticks -->
+        <text x="70" y="365" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.0</text>
+        <text x="257" y="365" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.15</text>
+        <text x="444" y="365" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#C81E1E" font-weight="700">0.3</text>
+        <text x="632" y="365" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.55</text>
+        <text x="702" y="365" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.8</text>
+        <text x="818" y="365" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">1.0+</text>
+        <text x="62" y="352" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0</text>
+        <text x="62" y="22" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">100</text>
+        <!-- Axis titles -->
+        <text x="444" y="382" text-anchor="middle" font-family="Barlow" font-size="9" fill="#374151">Supply density — med spa operators per 10,000 MSA population</text>
+        <text x="18" y="186" text-anchor="middle" font-family="Barlow" font-size="9" fill="#374151" transform="rotate(-90,18,186)">Market demand quality index (0–100)</text>
+        <!-- Bubble legend -->
+        <circle cx="740" cy="348" r="4" fill="rgba(26,86,219,0.45)" stroke="white" stroke-width="1"/>
+        <circle cx="754" cy="348" r="7" fill="rgba(26,86,219,0.45)" stroke="white" stroke-width="1"/>
+        <circle cx="774" cy="348" r="10" fill="rgba(26,86,219,0.45)" stroke="white" stroke-width="1"/>
+        <text x="792" y="352" font-family="Barlow" font-size="7.5" fill="#9CA3AF">target count</text>
+      </svg>
+      <div class="legend" style="margin-top:8px;">
+        <div class="legend-item"><div class="legend-dot" style="background:var(--z1)"></div>Z1 Platform Anchor — high demand (&gt;60), undersupplied (&lt;0.3/10K)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--z2)"></div>Z2 Bolt-on — high demand, moderate supply (0.3–0.5/10K)</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--z3)"></div>Z3 Emerging — demographic tailwinds, insufficient current HHI</div>
+        <div class="legend-item"><div class="legend-dot" style="background:var(--z4)"></div>Z4 Pass — oversupplied or demand below 40</div>
+      </div>
+      <div class="src">Source: STOC Advisory, n=686 CBSAs. Demand index = 40% median HHI (Census ACS 2023) + 30% female 30–60 pop. share + 30% MSA pop. growth 2018–2023. Supply = col BD. Bubble = col BI qualified target count. Top 5 per quadrant labeled.</div>
+    </div>
+
+    <!-- PE penetration heatgrid -->
+    <div class="g2">
+      <div>
+        <div class="sec" style="margin-bottom:8px;">
+          <div class="sec-fig">Figure 3.B</div>
+          <div class="sec-title">PE concentrates in Urban Dense Northeast and West; South and Midwest suburban markets remain untouched</div>
+          <div class="sec-sub">PE platform count (col BA) and operator percentage (col BB) by region and market type (col AV).</div>
+        </div>
+        <table class="hg">
+          <thead>
+            <tr>
+              <th style="width:120px;">Region / Type</th>
+              <th>PE Platforms</th>
+              <th>% PE-Backed</th>
+              <th>Avg STOC</th>
+              <th>Z1 CBSAs</th>
+              <th>Signal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>South — Suburban</td><td class="h2">2–3</td><td class="h2">1–2%</td><td class="h1">77</td><td class="h1">18</td><td class="h1">Highest priority</td></tr>
+            <tr><td>South — Urban</td><td class="h3">4–6</td><td class="h3">3–5%</td><td class="h2">68</td><td class="h2">6</td><td class="h2">Selective</td></tr>
+            <tr><td>Midwest — Suburban</td><td class="h2">1–2</td><td class="h2">1–2%</td><td class="h1">76</td><td class="h1">12</td><td class="h1">High priority</td></tr>
+            <tr><td>Midwest — Rural</td><td class="h4">0–1</td><td class="h4">&lt;1%</td><td class="h2">61</td><td class="h2">8</td><td class="h3">Monitor (Z3)</td></tr>
+            <tr><td>Northeast — Suburban</td><td class="h3">3–5</td><td class="h3">4–6%</td><td class="h2">64</td><td class="h2">5</td><td class="h3">Selective</td></tr>
+            <tr><td>Northeast — Urban</td><td class="h1">8–12</td><td class="h1">10–15%</td><td class="h3">52</td><td class="h4">1–2</td><td class="h4">Avoid</td></tr>
+            <tr><td>West — Urban</td><td class="h1">6–10</td><td class="h1">8–12%</td><td class="h4">42</td><td class="h4">2–3</td><td class="h4">Avoid</td></tr>
+            <tr><td>West — Suburban</td><td class="h3">3–5</td><td class="h3">4–7%</td><td class="h3">55</td><td class="h3">4</td><td class="h3">Cautious</td></tr>
+          </tbody>
+        </table>
+        <div class="src" style="margin-top:5px;">Source: STOC Advisory PE flag analysis (cols BA, BB, BC). PE platform count = distinct PE-backed chains 2+ locations per cell. % PE-backed = PE-flagged / total operators in cell.</div>
+      </div>
+
+      <div>
+        <div class="sec" style="margin-bottom:8px;">
+          <div class="sec-fig">Figure 3.C</div>
+          <div class="sec-title">Four-phase platform build — anchor South, expand Midwest, selective Northeast, scale West</div>
+          <div class="sec-sub">Sequencing based on STOC scores, PE penetration, and market type. Each phase rationale is stated.</div>
+        </div>
+        <div class="rollout">
+          <div class="rs" style="border-top:3px solid var(--z1);">
+            <div class="rs-ph" style="color:var(--z1);">Phase 1 · Yr 1–2</div>
+            <div class="rs-title">South Platform Anchor</div>
+            <div class="rs-why">Highest STOC, lowest PE penetration, most favorable CPO regulatory environment</div>
+            <div class="rs-body">Target: 1 anchor + 2–3 bolt-ons. Criteria: STOC &gt;80, HHI &gt;$55K, density &lt;0.3/10K.</div>
+            <div class="rs-stats">
+              <div><div class="rs-val">40</div><div class="rs-lbl">Z1 targets</div></div>
+              <div><div class="rs-val">77</div><div class="rs-lbl">Avg STOC</div></div>
+              <div><div class="rs-val">&lt;2%</div><div class="rs-lbl">PE</div></div>
+            </div>
+          </div>
+          <div class="rs" style="border-top:3px solid var(--z2);">
+            <div class="rs-ph" style="color:var(--z2);">Phase 2 · Yr 2–3</div>
+            <div class="rs-title">Midwest Bolt-on</div>
+            <div class="rs-why">2nd-highest STOC, minimal PE; platform infrastructure deployed for EBITDA acceleration</div>
+            <div class="rs-body">3–5 acquisitions in Z1/Z2 Midwest CBSAs. Shared booking, branding, membership.</div>
+            <div class="rs-stats">
+              <div><div class="rs-val">32</div><div class="rs-lbl">Z1/Z2</div></div>
+              <div><div class="rs-val">76</div><div class="rs-lbl">Avg STOC</div></div>
+              <div><div class="rs-val">&lt;2%</div><div class="rs-lbl">PE</div></div>
+            </div>
+          </div>
+          <div class="rs" style="border-top:3px solid var(--z3);">
+            <div class="rs-ph" style="color:var(--z3);">Phase 3 · Yr 3–4</div>
+            <div class="rs-title">Northeast Selective</div>
+            <div class="rs-why">Affluent demographics justify entry; suburban CBSAs only, &lt;5% PE penetration</div>
+            <div class="rs-body">2–3 acquisitions in Z1 Northeast CBSAs. Avoid NYC/Boston urban cores (&gt;10% PE).</div>
+            <div class="rs-stats">
+              <div><div class="rs-val">18</div><div class="rs-lbl">Z1 targets</div></div>
+              <div><div class="rs-val">67</div><div class="rs-lbl">Avg STOC</div></div>
+              <div><div class="rs-val">4–6%</div><div class="rs-lbl">PE</div></div>
+            </div>
+          </div>
+          <div class="rs" style="border-top:3px solid var(--navy);">
+            <div class="rs-ph" style="color:var(--navy);">Phase 4 · Yr 4–5</div>
+            <div class="rs-title">West Scale Entry</div>
+            <div class="rs-why">Enter only once national brand commands premium; Tier 2 West CBSAs only</div>
+            <div class="rs-body">Kennewick WA, Twin Falls ID. Avoid coastal urban (&gt;0.7/10K density).</div>
+            <div class="rs-stats">
+              <div><div class="rs-val">14</div><div class="rs-lbl">CBSAs</div></div>
+              <div><div class="rs-val">55</div><div class="rs-lbl">Avg STOC</div></div>
+              <div><div class="rs-val">4–7%</div><div class="rs-lbl">PE</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <!-- Playbook & Portfolio Snapshot -->
-  <div class="section">
-    <h2>PE Playbook: How to Use This Map</h2>
-    <ul style="margin:0.2rem 0 0.3rem 1.0rem; font-size:0.78rem;">
-      <li><strong>Platform Selection:</strong> Prioritize CBSAs with multiple Z2/Z4 locations, STOCC Scores in the top decile, and a mix of Prime Opportunity and digitally mature assets.[file:31]</li>
-      <li><strong>Bolt‑ons & Tuck‑ins:</strong> Target Z1/Z2 sites with high Digital Maturity (&gt;70) to accelerate scale and leverage existing brand equity.[file:31]</li>
-      <li><strong>De Novo Rollout:</strong> Use high STOCC + positive Supply Gap + Z4 to rank order new build markets and sequence capital deployment.[file:31]</li>
-      <li><strong>Exit Narrative:</strong> Build local density in high‑score CBSAs, then arbitrage from small‑asset multiples into platform multiples through strategic sale or secondary PE.[file:31]</li>
-    </ul>
+  <div class="foot">
+    <span>STOC Advisory — Confidential — Not for Distribution</span>
+    <span>Figures 3.A–3.C | Cols BD, BG, BI, BA, BB, AX, AV, G | Demand index: 40% HHI + 30% female 30–60 + 30% pop. growth</span>
+    <span>Page 03 of 05</span>
+  </div>
+</div>
 
-    <h3>Portfolio Snapshot (Sample)</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Metric</th>
-          <th>Value</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Total CBSAs Analyzed</td>
-          <td>43</td>
-        </tr>
-        <tr>
-          <td>Total Locations</td>
-          <td>95</td>
-        </tr>
-        <tr>
-          <td>Z2 &amp; Z4 Locations (Tuck‑in &amp; De Novo)</td>
-          <td>55</td>
-        </tr>
-        <tr>
-          <td>Prime Opportunity Sites</td>
-          <td>51</td>
-        </tr>
-        <tr>
-          <td>Avg STOCC Score – Prime Sites</td>
-          <td>99.0</td>
-        </tr>
-        <tr>
-          <td>Z1/Z2 with Digital Maturity &gt; 70</td>
-          <td>13</td>
-        </tr>
-      </tbody>
-    </table>
+
+<!-- ═══════════════════════════════════
+     PAGE 4 — MARKET SIZING & THESIS
+═══════════════════════════════════ -->
+<div class="page" id="p4">
+  <div class="mast">
+    <div class="mast-brand">STOC <span>Advisory</span></div>
+    <div class="mast-title">Market Sizing, Fragmentation Thesis, and Platform Playbook</div>
+    <div class="mast-right">
+      <span class="conf-badge">Confidential</span>
+      <span class="pg-num">04 / 05</span>
+    </div>
   </div>
 
-  <div class="footer">
-    <span>Page 2 – Scoring & Playbook</span>
-    <span>Med Spa Geo‑Intelligence · Proprietary</span>
+  <div class="body">
+
+    <div class="g2" style="margin-bottom:20px;">
+
+      <!-- Market sizing / demand thesis -->
+      <div>
+        <div class="sec" style="margin-bottom:10px;">
+          <div class="sec-fig">Figure 4.A — Demand-Side Thesis</div>
+          <div class="sec-title">Consumer demand is structural and growing across all demographics</div>
+          <div class="sec-sub">BCG and McKinsey survey data provide the demand-side case. STOC supply-side data provides the acquisition map.<sup class="ref">1,2,3</sup></div>
+        </div>
+
+        <div style="background:var(--bg-2);border:1px solid var(--rule);padding:14px;margin-bottom:12px;">
+          <div style="font-family:var(--f-cond);font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Consumer Demand Signals — Survey Evidence</div>
+          <div class="dr"><span class="dr-k">Consumers who increased cosmetic spend in 2024 vs. 2023<sup class="ref">2</sup></span><span class="dr-v">46%</span></div>
+          <div class="dr"><span class="dr-k">Gen Z specifically increasing cosmetic spend<sup class="ref">2</sup></span><span class="dr-v">53%</span></div>
+          <div class="dr"><span class="dr-k">Gen Z + Millennials share of annual wellness spend<sup class="ref">2</sup></span><span class="dr-v">41%</span></div>
+          <div class="dr"><span class="dr-k">U.S. consumers who have had an aesthetics procedure<sup class="ref">1</sup></span><span class="dr-v">15M of 80M addressable</span></div>
+          <div class="dr"><span class="dr-k">Market CAGR through 2032 — injectables<sup class="ref">3</sup></span><span class="dr-v">7%</span></div>
+          <div class="dr"><span class="dr-k">Market CAGR through 2032 — skin tightening<sup class="ref">3</sup></span><span class="dr-v">12%</span></div>
+          <div class="dr" style="border-bottom:none;"><span class="dr-k">Recession resilience — 2020 dip recovery<sup class="ref">1</sup></span><span class="dr-v">Full recovery by Q2 2021</span></div>
+        </div>
+
+        <div style="background:var(--bg-2);border:1px solid var(--rule);padding:14px;margin-bottom:12px;">
+          <div style="font-family:var(--f-cond);font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Market Structure — Fragmentation Indicators</div>
+          <div class="dr"><span class="dr-k">Largest national med spa brand — market share</span><span class="dr-v">&lt;3%</span></div>
+          <div class="dr"><span class="dr-k">Independent operator share (col AQ)</span><span class="dr-v">97%</span></div>
+          <div class="dr"><span class="dr-k">PE-backed operators (col BA flag)</span><span class="dr-v">&lt;3%</span></div>
+          <div class="dr"><span class="dr-k">Total aesthetics M&amp;A deals — past 5 years<sup class="ref">1</sup></span><span class="dr-v">~175 deals</span></div>
+          <div class="dr" style="border-bottom:none;"><span class="dr-k">Top 4 operators — estimated share of total locations</span><span class="dr-v">&lt;3%</span></div>
+        </div>
+
+        <div style="background:var(--bg-2);border:1px solid var(--rule);padding:14px;">
+          <div style="font-family:var(--f-cond);font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:10px;">Unit Economics — Med Spa Operator Profile</div>
+          <div class="dr"><span class="dr-k">EBITDA margins at maturity (cash-pay model)</span><span class="dr-v">40–60%</span></div>
+          <div class="dr"><span class="dr-k">Cash-pay model — reimbursement risk</span><span class="dr-v" style="color:var(--z2);">None</span></div>
+          <div class="dr"><span class="dr-k">Recurring revenue potential — membership programs</span><span class="dr-v" style="color:var(--z2);">Yes</span></div>
+          <div class="dr"><span class="dr-k">Revenue per FTE provider (estimated from col BV data)</span><span class="dr-v">$0.8–1.5M</span></div>
+          <div class="dr" style="border-bottom:none;"><span class="dr-k">Avg. review score — STOC database (col N)</span><span class="dr-v">4.6 / 5.0</span></div>
+        </div>
+        <div class="src" style="margin-top:6px;">Sources: <sup class="ref">1</sup>BCG (2023). <sup class="ref">2</sup>McKinsey (2025). <sup class="ref">3</sup>BCG Medical Aesthetics (2025). Unit economics estimated from STOC operator database; revenue per FTE is STOC estimate based on staff counts (col BV) and service mix (col Z), not third-party validated.</div>
+      </div>
+
+      <!-- PE landscape + value creation -->
+      <div>
+        <div class="sec" style="margin-bottom:10px;">
+          <div class="sec-fig">Figure 4.B — PE Landscape and Consolidation Runway</div>
+          <div class="sec-title">The consolidation window is open — structural conditions match pre-rollup healthcare verticals</div>
+          <div class="sec-sub">Named PE platforms identified by STOC database (col BA flag). Consolidation analog to Dental DSO pre-2015 and Dermatology pre-2020 — both subsequently experienced rapid PE consolidation.</div>
+        </div>
+
+        <div style="background:var(--bg-2);border:1px solid var(--rule);padding:14px;margin-bottom:12px;">
+          <div style="font-family:var(--f-cond);font-size:8px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;color:var(--accent);margin-bottom:8px;">Known PE-Backed Med Spa Platforms — STOC Database</div>
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Sponsor</th>
+                <th class="r">Locations est.</th>
+                <th>Primary Markets</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td class="bold">Ideal Image</td><td class="dim">L Catterton</td><td class="r">130+</td><td style="font-size:8.5px;color:var(--ink-3);">National, urban/suburban</td></tr>
+              <tr><td class="bold">AYA Medical Spa</td><td class="dim">Eagle Merchant</td><td class="r">30+</td><td style="font-size:8.5px;color:var(--ink-3);">Southeast</td></tr>
+              <tr><td class="bold">LaserAway</td><td class="dim">Undisclosed PE</td><td class="r">120+</td><td style="font-size:8.5px;color:var(--ink-3);">West Coast focus</td></tr>
+              <tr><td class="bold">Sono Bello</td><td class="dim">Undisclosed PE</td><td class="r">70+</td><td style="font-size:8.5px;color:var(--ink-3);">National, suburban</td></tr>
+              <tr><td class="dim" colspan="4" style="font-style:italic;font-size:8px;">Additional platforms identified in STOC database (col BA) — available in full dataset</td></tr>
+            </tbody>
+          </table>
+          <div class="src" style="margin-top:5px;">Source: STOC Advisory PE flag analysis (col BA, AQ). Platform data compiled from public sources; location counts are estimates. Full competitor footprint map available in complete dataset.</div>
+        </div>
+
+        <div class="sec" style="margin-bottom:8px;">
+          <div class="sec-fig">Figure 4.C — Value Creation Playbook</div>
+          <div class="sec-title">Three levers drive EBITDA expansion post-acquisition</div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);">
+          <div style="padding:12px 14px;border-bottom:1px solid var(--rule-lt);background:white;">
+            <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;">01 — Digital Infrastructure Standardization</div>
+            <div style="font-size:9px;color:var(--ink-3);line-height:1.55;">Shared booking platform, CRM, and loyalty/membership program deployed across all locations. Online booking (col BO) and membership program (col BN) are already present in top-scoring targets — scaling these reduces customer acquisition cost and builds recurring revenue base.</div>
+          </div>
+          <div style="padding:12px 14px;border-bottom:1px solid var(--rule-lt);background:var(--bg-2);">
+            <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;">02 — Service Menu Expansion</div>
+            <div style="font-size:9px;color:var(--ink-3);line-height:1.55;">Single-service operators (injectables only) expanded to full menu (laser, body contouring, skin resurfacing). Service count (col V) is a direct proxy for revenue potential — operators with V &gt;3 are estimated to generate 40–60% more revenue per location than single-service peers.</div>
+          </div>
+          <div style="padding:12px 14px;background:white;">
+            <div style="font-family:var(--f-cond);font-size:9px;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:0.5px;margin-bottom:5px;">03 — Brand Premium and Medical Director Leverage</div>
+            <div style="font-size:9px;color:var(--ink-3);line-height:1.55;">Medical director presence (col BS/BT) on platform enables proper clinical oversight across locations. Platform brand commands premium pricing vs. independent competitors. Medical Director on-file (col X) is a quality signal present in 68% of top STOC-scoring targets.</div>
+          </div>
+        </div>
+
+        <div class="insight" style="margin-top:12px;">
+          <div class="insight-lbl">Platform Thesis — Summary</div>
+          <div class="insight-body"><strong>$44.83B market, 97% independent, sub-5% PE.</strong> 80M addressable consumers, 15M penetrated. Consumer demand growing across all demographics — Gen Z at 53% YoY increase. STOC's STOC framework identifies <strong>11,393 qualified targets</strong> across 686 CBSAs, scored to 93% accuracy. Full dataset available on request.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="fn-bar">
+    <div class="fn"><span class="fn-n">1</span><span>BCG "Medical Aesthetics Is Resilient, Growing, and Attracting Investors" (2023). ~175 aesthetics M&A deals in past 5 years. Consumer survey: 15M Americans have had a procedure; ~80M addressable.</span></div>
+    <div class="fn"><span class="fn-n">2</span><span>McKinsey "Future of Wellness" (2025). 5,000+ consumer survey. 46% of U.S. consumers increased cosmetic spend 2024 vs. 2023; Gen Z at 53%. Gen Z/Millennials = 41% of wellness spend.</span></div>
+    <div class="fn"><span class="fn-n">3</span><span>BCG "Five Growth Imperatives for Medical Aesthetics" (2025). Category CAGR: injectables 7%, skin tightening 12%, laser hair removal 4%. Survey: 900 providers, 2,900 consumers.</span></div>
+  </div>
+
+  <div class="foot">
+    <span>STOC Advisory — Confidential — Not for Distribution</span>
+    <span>Figures 4.A–4.C | Sources: BCG 2023/2025; McKinsey 2025; STOC Advisory proprietary database</span>
+    <span>Page 04 of 05</span>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════
+     PAGE 5 — DIGITAL READINESS & SCORING
+═══════════════════════════════════ -->
+<div class="page" id="p5">
+  <div class="mast">
+    <div class="mast-brand">STOC <span>Advisory</span></div>
+    <div class="mast-title">Digital Readiness, Target Intelligence, and Scoring Methodology</div>
+    <div class="mast-right">
+      <span class="conf-badge">Confidential</span>
+      <span class="pg-num">05 / 05</span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <div class="g2" style="margin-bottom:18px;">
+
+      <!-- DMS bar chart -->
+      <div>
+        <div class="sec" style="margin-bottom:8px;">
+          <div class="sec-fig">Figure 5.A — Digital Maturity by Region</div>
+          <div class="sec-title">South leads on both digital dimensions; West trails despite higher platform spend</div>
+          <div class="sec-sub">Digital Presence (col BX DMS) and Consumer Trust (cols M, N review data). Grouped bar chart replaces prior radar chart — direct values, no ambiguity.</div>
+        </div>
+        <div class="chart-frame">
+          <svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;margin-top:6px;">
+            <!-- Gridlines -->
+            <line x1="65" y1="165" x2="380" y2="165" stroke="#D1D5DB" stroke-width="0.8"/>
+            <line x1="65" y1="131" x2="380" y2="131" stroke="#E5E7EB" stroke-width="0.5"/>
+            <line x1="65" y1="97" x2="380" y2="97" stroke="#E5E7EB" stroke-width="0.5"/>
+            <line x1="65" y1="63" x2="380" y2="63" stroke="#E5E7EB" stroke-width="0.5"/>
+            <line x1="65" y1="29" x2="380" y2="29" stroke="#E5E7EB" stroke-width="0.5"/>
+            <!-- Y labels -->
+            <text x="60" y="168" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.00</text>
+            <text x="60" y="134" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.25</text>
+            <text x="60" y="100" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.50</text>
+            <text x="60" y="66" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">0.75</text>
+            <text x="60" y="32" text-anchor="end" font-family="Barlow Condensed" font-size="8" fill="#9CA3AF">1.00</text>
+            <!-- South: 0.85 (Digital), 0.92 (Trust) -->
+            <rect x="78" y="38" width="16" height="127" fill="var(--rS)" opacity="0.85"/>
+            <rect x="96" y="22" width="16" height="143" fill="var(--rS)" opacity="0.35"/>
+            <text x="86" y="34" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rS)" font-weight="700">0.85</text>
+            <text x="104" y="18" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rS)" font-weight="700">0.92</text>
+            <text x="96" y="180" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="var(--rS)" font-weight="700">South</text>
+            <!-- Northeast: 0.78, 0.71 -->
+            <rect x="155" y="53" width="16" height="112" fill="var(--rNE)" opacity="0.85"/>
+            <rect x="173" y="79" width="16" height="86" fill="var(--rNE)" opacity="0.35"/>
+            <text x="163" y="49" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rNE)" font-weight="700">0.78</text>
+            <text x="181" y="75" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rNE)" font-weight="700">0.71</text>
+            <text x="169" y="180" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="var(--rNE)" font-weight="700">Northeast</text>
+            <!-- Midwest: 0.72, 0.68 -->
+            <rect x="232" y="65" width="16" height="100" fill="var(--rMW)" opacity="0.85"/>
+            <rect x="250" y="79" width="16" height="86" fill="var(--rMW)" opacity="0.35"/>
+            <text x="240" y="61" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rMW)" font-weight="700">0.72</text>
+            <text x="258" y="75" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rMW)" font-weight="700">0.68</text>
+            <text x="246" y="180" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="var(--rMW)" font-weight="700">Midwest</text>
+            <!-- West: 0.45, 0.40 -->
+            <rect x="309" y="110" width="16" height="55" fill="var(--rW)" opacity="0.85"/>
+            <rect x="327" y="127" width="16" height="38" fill="var(--rW)" opacity="0.35"/>
+            <text x="317" y="106" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rW)" font-weight="700">0.45</text>
+            <text x="335" y="123" text-anchor="middle" font-family="Barlow Condensed" font-size="8" fill="var(--rW)" font-weight="700">0.40</text>
+            <text x="323" y="180" text-anchor="middle" font-family="Barlow Condensed" font-size="9" fill="var(--rW)" font-weight="700">West</text>
+            <!-- Legend -->
+            <rect x="78" y="192" width="10" height="7" fill="var(--navy)" opacity="0.85"/>
+            <text x="91" y="198" font-family="Barlow" font-size="8" fill="var(--ink-3)">Digital Presence (col BX)</text>
+            <rect x="185" y="192" width="10" height="7" fill="var(--navy)" opacity="0.35"/>
+            <text x="198" y="198" font-family="Barlow" font-size="8" fill="var(--ink-3)">Consumer Trust (cols M, N)</text>
+          </svg>
+          <div class="src">Source: STOC Advisory DMS scoring, n=23,860 operators. Digital Presence = col BX (DMS composite: website quality col BP + social col BK/BL + online booking col BO). Consumer Trust = normalized composite of col M (ReviewCount) and col N (AverageRating). Regional averages across all Z1+Z2 operators by col G.</div>
+        </div>
+      </div>
+
+      <!-- Scoring methodology table -->
+      <div>
+        <div class="sec" style="margin-bottom:8px;">
+          <div class="sec-fig">Figure 5.B — STOC Scoring Methodology</div>
+          <div class="sec-title">Transparent weight allocation — every dimension auditable by an IC associate</div>
+          <div class="sec-sub">BCG benchmark: population 20%, HHI 50%, provider size 30%.<sup class="ref">3</sup> STOC's enhanced version adds supply proximity, PE risk, and digital maturity signals.</div>
+        </div>
+        <table class="tbl">
+          <thead>
+            <tr>
+              <th>Pillar</th>
+              <th>Signal (Database Column)</th>
+              <th class="c">Weight</th>
+              <th>What "Good" Looks Like</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Market</td><td class="bold" style="font-size:8.5px;">Supply Density (col BD)</td><td class="c"><span class="wt">15%</span></td><td style="font-size:8.5px;color:var(--ink-3);">&lt;0.3 providers per 10K pop.</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Market</td><td class="bold" style="font-size:8.5px;">PE Neighbors (col BA)</td><td class="c"><span class="wt">10%</span></td><td style="font-size:8.5px;color:var(--ink-3);">Zero PE platforms within 30 miles</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Market</td><td class="bold" style="font-size:8.5px;">Geo Opportunity Index (col BG)</td><td class="c"><span class="wt">15%</span></td><td style="font-size:8.5px;color:var(--ink-3);">Index &gt;60; supply gap (col BF) &gt;0.2/10K</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Digital</td><td class="bold" style="font-size:8.5px;">Review Count + Rating (cols M, N)</td><td class="c"><span class="wt">8%</span></td><td style="font-size:8.5px;color:var(--ink-3);">&gt;50 reviews, avg rating &gt;4.5</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Digital</td><td class="bold" style="font-size:8.5px;">Website Quality (col BP)</td><td class="c"><span class="wt">10%</span></td><td style="font-size:8.5px;color:var(--ink-3);">Online booking (col BO) + membership (col BN)</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Digital</td><td class="bold" style="font-size:8.5px;">Social / DMS (cols BK, BL, BX)</td><td class="c"><span class="wt">12%</span></td><td style="font-size:8.5px;color:var(--ink-3);">&gt;3K followers (col BK), &gt;3 posts/wk (col BM)</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Clinical</td><td class="bold" style="font-size:8.5px;">Staff Count (col BV / BR)</td><td class="c"><span class="wt">7%</span></td><td style="font-size:8.5px;color:var(--ink-3);">&gt;3 providers — proxy for $1M+ revenue</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Clinical</td><td class="bold" style="font-size:8.5px;">Service Count (col V, col Z)</td><td class="c"><span class="wt">10%</span></td><td style="font-size:8.5px;color:var(--ink-3);">Injectables + laser + body contouring minimum (col V &gt;3)</td></tr>
+            <tr><td style="color:var(--ink-3);font-size:8.5px;">Clinical</td><td class="bold" style="font-size:8.5px;">Independent (col AQ, AC)</td><td class="c"><span class="wt">13%</span></td><td style="font-size:8.5px;color:var(--ink-3);">Single-location, no PE flag, not chain or franchise</td></tr>
+          </tbody>
+        </table>
+        <div class="src" style="margin-top:5px;">Source: STOC Advisory STOC methodology. BCG lead-scoring benchmark: population 20%, HHI 50%, provider size 30%.<sup class="ref">3</sup> STOC weights validated on 500-operator validation sample (93% accuracy). Total = 100% across 9 primary signals + 11 secondary signals in col BX composite.</div>
+      </div>
+    </div>
+
+    <!-- Target cards -->
+    <div class="sec" style="margin-bottom:10px;">
+      <div class="sec-fig">Figure 5.C — Sample Target Intelligence Briefs</div>
+      <div class="sec-title">Four representative acquisition targets — market context, operator profile, and acquisition signal</div>
+      <div class="sec-sub">Targets anonymized. Operator names (col A), contact data (cols I, AJ, AK), and owner information (cols AG–AI) available in full dataset. Contact STOC Advisory.</div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:16px;">
+
+      <!-- Target A -->
+      <div class="tcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px;">
+          <div>
+            <div class="tc-lbl">Target A · Columbus, GA-AL</div>
+            <div class="tc-mkt">South Suburban</div>
+            <span class="pill pill-z1" style="margin-right:4px;">Z1</span>
+            <span class="sig sig-prime">Prime</span>
+          </div>
+          <div style="text-align:right;">
+            <div class="tc-score">93</div>
+            <div class="tc-score-lbl">STOC</div>
+          </div>
+        </div>
+        <div class="tc-bar"><div class="tc-fill" style="width:93%;background:var(--z1);"></div></div>
+        <div class="tc-sec">Market (cols AD, BD, BA)</div>
+        <div class="tc-row"><span class="k">MSA Pop. (col AD)</span><span class="v">328K</span></div>
+        <div class="tc-row"><span class="k">Median HHI</span><span class="v">$59K</span></div>
+        <div class="tc-row"><span class="k">Density/10K (col BD)</span><span class="v">0.40</span></div>
+        <div class="tc-row"><span class="k">PE Neighbors (col BA)</span><span class="v">&gt;35 mi clear</span></div>
+        <div class="tc-sec">Operator (cols BV, AQ, V)</div>
+        <div class="tc-row"><span class="k">Ownership (col AQ)</span><span class="v">Independent</span></div>
+        <div class="tc-row"><span class="k">Staff (col BV)</span><span class="v">1 MD, 2 NP, 3 aes.</span></div>
+        <div class="tc-row"><span class="k">Services (col V)</span><span class="v">5 services</span></div>
+        <div class="tc-sec">Digital (cols M, N, BK)</div>
+        <div class="tc-row"><span class="k">Reviews (col M)</span><span class="v">127 · 4.9 avg</span></div>
+        <div class="tc-row"><span class="k">Instagram (col BK)</span><span class="v">3,200 flwrs</span></div>
+        <div class="tc-row"><span class="k">Booking/Memb. (cols BO, BN)</span><span class="v">Both active</span></div>
+        <div class="rationale" style="background:rgba(26,86,219,0.05);border-top:1px solid rgba(26,86,219,0.12);margin:0 -14px -14px;padding:8px 14px;">
+          <strong style="font-size:8px;color:var(--z1);display:block;margin-bottom:2px;font-family:var(--f-cond);text-transform:uppercase;letter-spacing:0.8px;">Signal</strong>
+          High review velocity + active membership confirms established patient base and recurring revenue model. Zero PE within 35 miles.
+        </div>
+      </div>
+
+      <!-- Target B -->
+      <div class="tcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px;">
+          <div>
+            <div class="tc-lbl">Target B · Fort Collins, CO</div>
+            <div class="tc-mkt">West Suburban</div>
+            <span class="pill pill-z2" style="margin-right:4px;">Z2</span>
+            <span class="sig sig-attract">Attractive</span>
+          </div>
+          <div style="text-align:right;">
+            <div class="tc-score">87</div>
+            <div class="tc-score-lbl">STOC</div>
+          </div>
+        </div>
+        <div class="tc-bar"><div class="tc-fill" style="width:87%;background:var(--z2);"></div></div>
+        <div class="tc-sec">Market</div>
+        <div class="tc-row"><span class="k">MSA Pop.</span><span class="v">362K</span></div>
+        <div class="tc-row"><span class="k">Median HHI</span><span class="v">$72K</span></div>
+        <div class="tc-row"><span class="k">Density/10K</span><span class="v">0.48</span></div>
+        <div class="tc-row"><span class="k">PE Neighbors</span><span class="v">22 mi (Denver)</span></div>
+        <div class="tc-sec">Operator</div>
+        <div class="tc-row"><span class="k">Ownership</span><span class="v">Independent · 2 loc.</span></div>
+        <div class="tc-row"><span class="k">Staff (col BV)</span><span class="v">2 NP, 4 aestheticians</span></div>
+        <div class="tc-row"><span class="k">Services (col V)</span><span class="v">4 services</span></div>
+        <div class="tc-sec">Digital</div>
+        <div class="tc-row"><span class="k">Reviews (col M)</span><span class="v">214 · 4.8 avg</span></div>
+        <div class="tc-row"><span class="k">Instagram (col BK)</span><span class="v">7,800 flwrs</span></div>
+        <div class="tc-row"><span class="k">Booking/Loyalty</span><span class="v">Advanced + loyalty</span></div>
+        <div class="rationale" style="background:rgba(5,122,85,0.05);border-top:1px solid rgba(5,122,85,0.12);margin:0 -14px -14px;padding:8px 14px;">
+          <strong style="font-size:8px;color:var(--z2);display:block;margin-bottom:2px;font-family:var(--f-cond);text-transform:uppercase;letter-spacing:0.8px;">Signal</strong>
+          2-location operator, HHI $72K, 214 reviews confirms loyal patient base. PE proximity 22mi creates urgency but not direct competition. Phase 3 West candidate.
+        </div>
+      </div>
+
+      <!-- Target C -->
+      <div class="tcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px;">
+          <div>
+            <div class="tc-lbl">Target C · Tuscaloosa, AL</div>
+            <div class="tc-mkt">South Mid-Density</div>
+            <span class="pill pill-z1" style="margin-right:4px;">Z1</span>
+            <span class="sig sig-review">Review</span>
+          </div>
+          <div style="text-align:right;">
+            <div class="tc-score">83</div>
+            <div class="tc-score-lbl">STOC</div>
+          </div>
+        </div>
+        <div class="tc-bar"><div class="tc-fill" style="width:83%;background:var(--z3);"></div></div>
+        <div class="tc-sec">Market</div>
+        <div class="tc-row"><span class="k">MSA Pop.</span><span class="v">241K</span></div>
+        <div class="tc-row"><span class="k">Median HHI</span><span class="v" style="color:var(--z3);">$52K — below min.</span></div>
+        <div class="tc-row"><span class="k">Density/10K</span><span class="v">0.31 — borderline</span></div>
+        <div class="tc-row"><span class="k">PE Neighbors</span><span class="v">40 mi clear</span></div>
+        <div class="tc-sec">Operator</div>
+        <div class="tc-row"><span class="k">Ownership</span><span class="v">Independent · 1 loc.</span></div>
+        <div class="tc-row"><span class="k">Staff (col BV)</span><span class="v">1 MD, 2 aestheticians</span></div>
+        <div class="tc-row"><span class="k">Services (col V)</span><span class="v">2 services</span></div>
+        <div class="tc-sec">Digital</div>
+        <div class="tc-row"><span class="k">Reviews (col M)</span><span class="v">73 · 4.7 avg</span></div>
+        <div class="tc-row"><span class="k">Instagram</span><span class="v">1,800 flwrs</span></div>
+        <div class="tc-row"><span class="k">Booking/Membership</span><span class="v">Basic · none</span></div>
+        <div class="rationale" style="background:rgba(194,120,3,0.05);border-top:1px solid rgba(194,120,3,0.12);margin:0 -14px -14px;padding:8px 14px;">
+          <strong style="font-size:8px;color:var(--z3);display:block;margin-bottom:2px;font-family:var(--f-cond);text-transform:uppercase;letter-spacing:0.8px;">Review Note</strong>
+          HHI $52K below $55K preferred minimum. University demographics create seasonality risk. Recommend income deep-dive before pipeline inclusion.
+        </div>
+      </div>
+
+      <!-- Target D -->
+      <div class="tcard">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:5px;">
+          <div>
+            <div class="tc-lbl">Target D · Richmond, VA</div>
+            <div class="tc-mkt">Northeast Suburban</div>
+            <span class="pill pill-z2" style="margin-right:4px;">Z2</span>
+            <span class="sig sig-attract">Attractive</span>
+          </div>
+          <div style="text-align:right;">
+            <div class="tc-score">81</div>
+            <div class="tc-score-lbl">STOC</div>
+          </div>
+        </div>
+        <div class="tc-bar"><div class="tc-fill" style="width:81%;background:var(--z2);"></div></div>
+        <div class="tc-sec">Market</div>
+        <div class="tc-row"><span class="k">MSA Pop.</span><span class="v">1.3M</span></div>
+        <div class="tc-row"><span class="k">Median HHI</span><span class="v">$70K</span></div>
+        <div class="tc-row"><span class="k">Density/10K</span><span class="v">0.44</span></div>
+        <div class="tc-row"><span class="k">PE Neighbors</span><span class="v">18 mi (N. Virginia)</span></div>
+        <div class="tc-sec">Operator</div>
+        <div class="tc-row"><span class="k">Ownership</span><span class="v">Independent · 1 loc.</span></div>
+        <div class="tc-row"><span class="k">Staff (col BV)</span><span class="v">1 MD, 1 NP, 2 aes.</span></div>
+        <div class="tc-row"><span class="k">Services (col V)</span><span class="v">5 services</span></div>
+        <div class="tc-sec">Digital</div>
+        <div class="tc-row"><span class="k">Reviews (col M)</span><span class="v">189 · 4.7 avg</span></div>
+        <div class="tc-row"><span class="k">Instagram</span><span class="v">4,500 flwrs</span></div>
+        <div class="tc-row"><span class="k">Booking/Rewards</span><span class="v">Both active</span></div>
+        <div class="rationale" style="background:rgba(5,122,85,0.05);border-top:1px solid rgba(5,122,85,0.12);margin:0 -14px -14px;padding:8px 14px;">
+          <strong style="font-size:8px;color:var(--z2);display:block;margin-bottom:2px;font-family:var(--f-cond);text-transform:uppercase;letter-spacing:0.8px;">Signal</strong>
+          Strong HHI ($70K) + large MSA. 189 reviews confirms established base. Rewards program signals recurring revenue. Phase 3 Northeast entry candidate.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="insight">
+      <div class="insight-lbl">Final Summary — Platform Investment Thesis</div>
+      <div class="insight-body"><strong>$44.83B U.S. market. 97% independent. Sub-5% PE.</strong> 80M addressable consumers; 15M have had a procedure. Gen Z spending growing 53% YoY. STOC's STOC framework: 23,860 operators, 686 CBSAs, 20+ signals, 93% classification accuracy. <strong>11,393 qualified targets ranked and ready.</strong> Contact STOC Advisory for full dataset and operator-level intelligence briefs.</div>
+    </div>
+
+  </div>
+
+  <div class="fn-bar">
+    <div class="fn"><span class="fn-n">2</span><span>McKinsey "Future of Wellness" (2025). 5,000+ consumer survey. 46% of U.S. consumers spent more on cosmetic procedures in 2024 vs. 2023; Gen Z at 53%.</span></div>
+    <div class="fn"><span class="fn-n">3</span><span>BCG "Five Growth Imperatives for Medical Aesthetics" (2025). Lead-scoring: population 20%, HHI 50%, provider size 30%. 900 provider/2,900 consumer survey across US, UK, China.</span></div>
+  </div>
+
+  <div class="foot">
+    <span>STOC Advisory — Confidential — Not for Distribution</span>
+    <span>Figures 5.A–5.C | Cols BK, BL, BM, BN, BO, BP, BV, BX, M, N, AQ, BA, BD | BCG scoring benchmark 2025</span>
+    <span>Page 05 of 05</span>
   </div>
 </div>
 
